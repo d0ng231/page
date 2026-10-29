@@ -1,0 +1,14 @@
+{
+  "name": "matt-li-page",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The personal website of Chenjun (Matt) Li.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs --dist",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,15 +1,77 @@
----
-layout: page
-title: Home
----
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f7">
+  <meta name="description" content="Matt (Chenjun) Li — PhD researcher at Cornell Tech and Weill Cornell Medicine. Multimodal learning, reinforcement learning, and grounded reasoning.">
+  <meta property="og:title" content="Matt Li — Research & Selected Work">
+  <meta property="og:description" content="Multimodal learning, grounded reasoning, and photographs along the way.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://d0ng231.github.io/page/">
+  <meta property="og:image" content="https://d0ng231.github.io/page/assets/design/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://d0ng231.github.io/page/">
+  <link rel="icon" type="image/svg+xml" href="assets/design/favicon.svg">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('matt-theme')||'light'}catch{}</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <title>Matt Li — Research & Selected Work</title>
+</head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell" id="home">
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Matt Li, home"><span class="mark" aria-hidden="true">m<span>l</span></span><span>matt.li</span></a>
+      <nav aria-label="Main navigation"><a href="#research">Work</a><a href="#demos">Demos</a><a href="#photography">Photos</a></nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme" hidden><svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="6.5" stroke="currentColor"/><path d="M10 3.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+    </header>
+    <main id="main">
+      <section class="intro" id="about" aria-labelledby="intro-title">
+        <div class="intro-label mono"><span class="status-dot" aria-hidden="true"></span> RESEARCH / ENGINEERING</div>
+        <h1 id="intro-title">Matt Li<span class="name-note">Chenjun Li</span></h1>
+        <p class="intro-role">PhD researcher at <strong>Cornell Tech</strong> &amp; <strong>Weill Cornell Medicine.</strong></p>
+        <p class="intro-description">I work on multimodal models that reason with visual and structured evidence. Currently exploring VLM post-training, reinforcement learning, and 3D grounding.</p>
+        <div class="intro-links"><a href="mailto:cl2733@cornell.edu">Email <span aria-hidden="true">↗</span></a><a href="https://github.com/d0ng231" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://scholar.google.com/citations?user=BFxNMooAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/matt-c-l-79a921210/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+        <div class="intro-foot mono"><span>NEW YORK, NY</span><span>VLMs / RL / 3D / AI TEXT DETECTION</span></div>
+      </section>
 
-<!-- Footer section with the plugin -->
-<footer id="footer">
-  <div id="clustrmap-container" style="width: 130px; height: 130px; margin: 30px auto 0 auto;">
-    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=FGUlv1td6SYQH1J7Pv0SNgXXMmfRtnVAVVWhh4q0jLc"></script>
+      <section class="section" id="research" aria-labelledby="work-title">
+        <div class="section-label"><span class="mono section-index">01 /</span><h2 id="work-title">Selected work</h2><p>Models, methods,<br>and open source.</p></div>
+        <div class="section-content work-list">
+          <article class="work-row"><span class="work-symbol mono" aria-hidden="true">M_</span><div class="work-body"><div class="work-heading"><h3>MELD</h3><span class="mono work-year">2026</span></div><p>One detector, multiple questions: AI text detection, generator attribution, rewrite identification, and token-level localization.</p><div class="work-meta"><span class="publication">ICLR 2027 · Under review</span><div class="links"><a href="https://arxiv.org/abs/2605.06903" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/MELD" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://anon-review-meld-2026-meld.static.hf.space/index.html" target="_blank" rel="noopener noreferrer">Demo ↗</a></div></div></div></article>
+          <article class="work-row"><span class="work-symbol mono" aria-hidden="true">O₁</span><div class="work-body"><div class="work-heading"><h3>Overjet-1</h3><span class="mono work-year">2026</span></div><p>A generalist vision-language model for grounded dental image understanding, spanning radiographs, photographs, and 3D CBCT.</p><div class="work-meta"><span class="publication">ICLR 2027 · Under review</span><span class="work-note">Research at Overjet</span></div></div></article>
+          <article class="work-row"><span class="work-symbol mono" aria-hidden="true">S↗</span><div class="work-body"><div class="work-heading"><h3>OCTA-SVR</h3><span class="mono work-year">2026</span></div><p>Synthetic vasculature and pathology for better medical VLM reasoning. A dataset of 100K image–text pairs.</p><div class="work-meta"><span class="publication">MIDL 2026 · Spotlight</span><div class="links"><a href="https://proceedings.mlr.press/v315/li26d.html" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/OCTA-SVR" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://zenodo.org/records/17706653" target="_blank" rel="noopener noreferrer">Data ↗</a></div></div></div></article>
+          <article class="work-row"><span class="work-symbol mono" aria-hidden="true">G·</span><div class="work-body"><div class="work-heading"><h3>Graph-based Fine-Tuning</h3><span class="mono work-year">2025</span></div><p>Connecting vision-language models with graph knowledge for explainable medical image analysis.</p><div class="work-meta"><span class="publication">MICCAI 2025 · Early accept</span><div class="links"><a href="https://arxiv.org/abs/2503.09808" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/GFT" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="#gft-demo">Setup ↓</a></div></div></div></article>
+          <article class="work-row"><span class="work-symbol mono" aria-hidden="true">E±</span><div class="work-body"><div class="work-heading"><h3>DDEvENet</h3><span class="mono work-year">2025</span></div><p>Evidence-based ensembles for uncertainty-aware brain parcellation using diffusion MRI.</p><div class="work-meta"><span class="publication">Computerized Medical Imaging and Graphics</span><div class="links"><a href="https://doi.org/10.1016/j.compmedimag.2024.102489" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/DDEvENet" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></div></article>
+        </div>
+      </section>
+
+      <section class="section" id="demos" aria-labelledby="demos-title">
+        <div class="section-label"><span class="mono section-index">02 /</span><h2 id="demos-title">Try the work</h2><p>A little more<br>hands-on.</p></div>
+        <div class="section-content demo-grid">
+          <article class="demo"><div class="demo-top mono"><span>01</span><span class="demo-status">HOSTED DEMO</span></div><h3>MELD playground</h3><p>Explore AI-generated text detection and token-level predictions.</p><a class="demo-action" href="https://anon-review-meld-2026-meld.static.hf.space/index.html" target="_blank" rel="noopener noreferrer">Open demo <span aria-hidden="true">↗</span></a></article>
+          <article class="demo" id="gft-demo"><div class="demo-top mono"><span>02</span><span class="demo-status">LOCAL DEMO</span></div><h3>Graph-grounded inference</h3><p>Run GFT with your own environment, model checkpoint, and data.</p><details class="demo-setup"><summary>View setup <span aria-hidden="true">+</span></summary><div><p>Follow the repository installation guide and prepare the Stage 2 checkpoint, then launch:</p><div class="command"><code>python -m gft.inference.deploy --model checkpoints/stage2</code><button type="button" class="copy-command" hidden>Copy</button></div><a href="https://github.com/d0ng231/GFT#quickstart" target="_blank" rel="noopener noreferrer">Installation &amp; requirements ↗</a><p class="copy-feedback" aria-live="polite"></p></div></details></article>
+        </div>
+      </section>
+
+      <section class="section background" aria-labelledby="background-title">
+        <div class="section-label"><span class="mono section-index">03 /</span><h2 id="background-title">Along the way</h2></div>
+        <div class="section-content"><div class="timeline-row"><span class="mono">2024 — NOW</span><div><h3>Cornell University</h3><p>PhD, Electrical &amp; Computer Engineering. Advised by Johannes C. Paetzold and Mert R. Sabuncu.</p></div></div><div class="timeline-row"><span class="mono">SUMMER 2026</span><div><h3>Overjet</h3><p>Machine Learning Intern · VLM post-training and reinforcement learning.</p></div></div><details class="more-background"><summary>Earlier <span aria-hidden="true">+</span></summary><div class="timeline-row"><span class="mono">2020 — 2024</span><div><h3>UESTC × University of Glasgow</h3><p>Joint undergraduate programme in electronic engineering. First-class honours.</p></div></div><div class="timeline-row"><span class="mono">SUMMER 2023</span><div><h3>Lenovo Research</h3><p>Research internship in component traceability and resource management.</p></div></div></details></div>
+      </section>
+
+      <section class="section photography" id="photography" aria-labelledby="photos-title">
+        <div class="section-label"><span class="mono section-index">04 /</span><h2 id="photos-title">Away from<br>the screen</h2><p>Places, light,<br>and geometry.</p></div>
+        <div class="section-content"><div class="gallery" aria-label="Selected photographs">
+          <figure class="photo"><a href="assets/photos/chongqing.jpg" aria-label="Enlarge City, after dark"><img src="assets/photos/chongqing-small.jpg" srcset="assets/photos/chongqing-small.jpg 667w, assets/photos/chongqing.jpg 1200w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1200" height="1800" loading="lazy" decoding="async" alt="A red illuminated bridge cuts diagonally across Chongqing’s skyline at night."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>City, after dark</span><span>2024</span></figcaption></figure>
+          <figure class="photo"><a href="assets/photos/snowfield.jpg" aria-label="Enlarge Quiet terrain"><img src="assets/photos/snowfield-small.jpg" srcset="assets/photos/snowfield-small.jpg 720w, assets/photos/snowfield.jpg 1800w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1800" height="1200" loading="lazy" decoding="async" alt="A solitary snowy mountain and a power pylon above a patterned black-and-white plain."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Quiet terrain</span><span>2024</span></figcaption></figure>
+          <figure class="photo"><a href="assets/photos/snow-river.jpg" aria-label="Enlarge Winter crossing"><img src="assets/photos/snow-river-small.jpg" srcset="assets/photos/snow-river-small.jpg 720w, assets/photos/snow-river.jpg 1800w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1800" height="1200" loading="lazy" decoding="async" alt="Antelope on a snowy plateau beside a winding river and distant mountains."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Winter crossing</span><span>2024</span></figcaption></figure>
+          <figure class="photo"><a href="assets/photos/urban-layers.jpg" aria-label="Enlarge Urban layers"><img src="assets/photos/urban-layers-small.jpg" srcset="assets/photos/urban-layers-small.jpg 709w, assets/photos/urban-layers.jpg 1275w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1275" height="1800" loading="lazy" decoding="async" alt="A black-and-white photograph of sculptural street art against the sharp lines of a building."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Urban layers</span><span>2025</span></figcaption></figure>
+        </div><p class="gallery-note mono">A FEW FRAMES FROM MY CAMERA ROLL <span>© MATT LI</span></p></div>
+      </section>
+    </main>
+    <footer><a href="mailto:cl2733@cornell.edu">Let’s connect <span aria-hidden="true">↗</span></a><span class="mono">© <span id="year">2026</span> MATT LI</span><a class="back-top mono" href="#home">BACK TO TOP ↑</a></footer>
   </div>
-</footer>
-
+  <dialog class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-bar"><span class="mono" id="lightbox-count"></span><button type="button" class="lightbox-close" aria-label="Close photograph">Close <span aria-hidden="true">×</span></button></div><div class="lightbox-stage"><figure><div class="lightbox-photo"><img id="lightbox-image" alt=""><span class="watermark" aria-hidden="true">© Matt Li</span></div><figcaption id="lightbox-title"></figcaption></figure></div><div class="lightbox-controls"><button type="button" class="photo-prev" aria-label="Previous photograph">← Previous</button><span class="mono">SELECTED FRAMES</span><button type="button" class="photo-next" aria-label="Next photograph">Next →</button></div></dialog>
 </body>
+</html>
