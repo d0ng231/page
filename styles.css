@@ -13,4 +13,11 @@
 .gallery-toggle{justify-self:start;display:flex;align-items:center;gap:24px;padding:9px 0;border-bottom:1px solid var(--line);font-size:11px;text-align:left}
 .gallery-toggle:hover{border-color:var(--ink)}
 .gallery-toggle span{color:var(--muted)}
+.intro-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:40px;align-items:start}
+.intro-copy{grid-column:1;grid-row:1;min-width:0}
+.intro-portrait{grid-column:2;grid-row:1;position:relative;line-height:0;padding:6px;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow)}
+.intro-portrait img{display:block;width:100%;height:auto}
+.intro-portrait .watermark{right:15px;bottom:15px;font-size:8px}
+@media(max-width:900px){.intro-layout{grid-template-columns:minmax(0,1fr) 240px;gap:28px}}
+@media(max-width:640px){.intro-layout{grid-template-columns:minmax(0,1fr);gap:27px}.intro-portrait{grid-column:1;grid-row:1}.intro-copy{grid-column:1;grid-row:2}.intro{padding-top:28px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}

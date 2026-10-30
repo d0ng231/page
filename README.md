@@ -28,6 +28,8 @@ MELD links to its existing hosted demo. GFT is a local demo requiring installati
 
 Photograph names are editorial labels; years identify the reference series. The faint `© Matt Li` watermark is a website overlay on each thumbnail and enlarged view; it is not burned into the image file. Its color follows the photograph's border, independently of the site theme. Six images appear initially, with a button to reveal all twenty; all twenty remain accessible without JavaScript. When adding images, preserve their aspect ratio, add descriptive alternative text, and include the watermark in the same image wrapper. Only add approved website derivatives to `assets/photos/` because the build copies that directory.
 
+The homepage introduction uses the user-supplied forest photograph, showing Matt from behind, as its only personal portrait. Preserve its full composition and colors; do not add a front-facing portrait. It appears beside the introduction on larger screens and above the name on phones. Its responsive web copies also omit private metadata.
+
 The latest CV's phone number and private Google Doc URL are not included in the public site. Update project links and paper statuses as needed. The archived theme retains historical sources and links but is not served.
 
 ## Accessibility
@@ -38,7 +40,7 @@ All primary content and local-demo instructions are available without JavaScript
 
 Repository: https://github.com/d0ng231/page
 
-The included workflow tests and builds the `matt` branch, then publishes only `dist/`. In repository Settings → Pages, choose GitHub Actions. Pull requests run checks without deployment. Changes to the live site are published after a successful push and workflow run.
+The included workflow tests and builds the `matt` branch, then publishes only `dist/`. In repository Settings → Pages, choose GitHub Actions. Pull requests run checks without deployment. Changes to the live site are published after a successful push and workflow run. A newer push supersedes an unfinished deployment for the same branch, so an outdated queued version does not block the latest update.
 
 Public URL: `https://d0ng231.github.io/page/`. If the repository or domain changes, update the canonical/social URLs, `robots.txt`, `sitemap.xml`, and `404.html`. GitHub repository redirects do not redirect the former Pages path `/web/`.
 
