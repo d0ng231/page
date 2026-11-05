@@ -22,8 +22,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page-shell" id="home">
     <header class="site-header">
-      <a class="wordmark" href="#home" aria-label="Matt Li, home"><span class="mark" aria-hidden="true">m<span>l</span></span><span>matt.li</span></a>
-      <nav aria-label="Main navigation"><a href="#research">Work</a><a href="#demos">Demos</a><a href="#photography">Photos</a></nav>
+      <nav aria-label="Main navigation"><a href="#research">Work</a><a href="#demos">Demo</a><a href="#photography">Photos</a></nav>
       <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme" hidden><svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="6.5" stroke="currentColor"/><path d="M10 3.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
     </header>
     <main id="main">
@@ -31,70 +30,778 @@
         <div class="intro-layout">
           <figure class="intro-portrait">
             <img src="assets/photos/matt-in-the-forest-small.jpg" srcset="assets/photos/matt-in-the-forest-small.jpg 720w, assets/photos/matt-in-the-forest.jpg 1600w" sizes="(max-width:640px) calc(100vw - 44px), (max-width:900px) 240px, 280px" width="1600" height="1061" fetchpriority="high" decoding="async" alt="Matt seen from behind, looking across a sunlit pine forest.">
-            <span class="watermark" aria-hidden="true">© Matt Li</span>
           </figure>
           <div class="intro-copy">
             <h1 id="intro-title">Matt Li</h1>
-            <p class="intro-role">PhD researcher at <strong>Cornell Tech</strong> &amp; <strong>Weill Cornell Medicine.</strong></p>
+            <p class="intro-role">PhD researcher at <strong>Cornell Tech</strong> &amp; <strong>Weill Cornell Medicine</strong> in New York.</p>
             <p class="intro-description">I work on multimodal models that reason with visual and structured evidence. Currently exploring VLM post-training, reinforcement learning, and 3D grounding.</p>
             <div class="intro-links"><a href="mailto:cl2733@cornell.edu">Email <span aria-hidden="true">↗</span></a><a href="https://github.com/d0ng231" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://scholar.google.com/citations?user=BFxNMooAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/matt-c-l-79a921210/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
           </div>
         </div>
-        <div class="intro-foot mono"><span>NEW YORK, NY</span><span>VLMs / RL / 3D / AI TEXT DETECTION</span></div>
       </section>
 
       <section class="section" id="research" aria-labelledby="work-title">
-        <div class="section-label"><span class="mono section-index">01 /</span><h2 id="work-title">Selected work</h2><p>Models, methods,<br>and open source.</p></div>
+        <div class="section-label"><h2 id="work-title">Selected work</h2></div>
         <div class="section-content work-list">
-          <article class="work-row"><span class="work-symbol mono" aria-hidden="true">M_</span><div class="work-body"><div class="work-heading"><h3>MELD</h3><span class="mono work-year">2026</span></div><p>One detector, multiple questions: AI text detection, generator attribution, rewrite identification, and token-level localization.</p><div class="work-meta"><span class="publication">ICLR 2027 · Under review</span><div class="links"><a href="https://arxiv.org/abs/2605.06903" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/MELD" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://anon-review-meld-2026-meld.static.hf.space/index.html" target="_blank" rel="noopener noreferrer">Demo ↗</a></div></div></div></article>
-          <article class="work-row"><span class="work-symbol mono" aria-hidden="true">O₁</span><div class="work-body"><div class="work-heading"><h3>Overjet-1</h3><span class="mono work-year">2026</span></div><p>A generalist vision-language model for grounded dental image understanding, spanning radiographs, photographs, and 3D CBCT.</p><div class="work-meta"><span class="publication">ICLR 2027 · Under review</span><span class="work-note">Research at Overjet</span></div></div></article>
-          <article class="work-row"><span class="work-symbol mono" aria-hidden="true">S↗</span><div class="work-body"><div class="work-heading"><h3>OCTA-SVR</h3><span class="mono work-year">2026</span></div><p>Synthetic vasculature and pathology for better medical VLM reasoning. A dataset of 100K image–text pairs.</p><div class="work-meta"><span class="publication">MIDL 2026 · Spotlight</span><div class="links"><a href="https://proceedings.mlr.press/v315/li26d.html" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/OCTA-SVR" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://zenodo.org/records/17706653" target="_blank" rel="noopener noreferrer">Data ↗</a></div></div></div></article>
-          <article class="work-row"><span class="work-symbol mono" aria-hidden="true">G·</span><div class="work-body"><div class="work-heading"><h3>Graph-based Fine-Tuning</h3><span class="mono work-year">2025</span></div><p>Connecting vision-language models with graph knowledge for explainable medical image analysis.</p><div class="work-meta"><span class="publication">MICCAI 2025 · Early accept</span><div class="links"><a href="https://arxiv.org/abs/2503.09808" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/GFT" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="#gft-demo">Setup ↓</a></div></div></div></article>
-          <article class="work-row"><span class="work-symbol mono" aria-hidden="true">E±</span><div class="work-body"><div class="work-heading"><h3>DDEvENet</h3><span class="mono work-year">2025</span></div><p>Evidence-based ensembles for uncertainty-aware brain parcellation using diffusion MRI.</p><div class="work-meta"><span class="publication">Computerized Medical Imaging and Graphics</span><div class="links"><a href="https://doi.org/10.1016/j.compmedimag.2024.102489" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/DDEvENet" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></div></article>
+          <article class="work-row"><div class="work-body"><div class="work-heading"><h3>MELD</h3><span class="mono work-year">2026</span></div><p>One detector, multiple questions: AI text detection, generator attribution, rewrite identification, and token-level localization.</p><div class="work-meta"><span class="publication">ICLR 2027 · Under review</span><div class="links"><a href="https://arxiv.org/abs/2605.06903" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/MELD" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://anon-review-meld-2026-meld.static.hf.space/index.html" target="_blank" rel="noopener noreferrer">Demo ↗</a></div></div></div></article>
+          <article class="work-row"><div class="work-body"><div class="work-heading"><h3>Overjet-1</h3><span class="mono work-year">2026</span></div><p>A generalist vision-language model for grounded dental image understanding, spanning radiographs, photographs, and 3D CBCT.</p><div class="work-meta"><span class="publication">ICLR 2027 · Under review</span><span class="work-note">Research at Overjet</span></div></div></article>
+          <article class="work-row"><div class="work-body"><div class="work-heading"><h3>OCTA-SVR</h3><span class="mono work-year">2026</span></div><p>Synthetic vasculature and pathology for better medical VLM reasoning. A dataset of 100K image–text pairs.</p><div class="work-meta"><span class="publication">MIDL 2026 · Spotlight</span><div class="links"><a href="https://proceedings.mlr.press/v315/li26d.html" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/OCTA-SVR" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://zenodo.org/records/17706653" target="_blank" rel="noopener noreferrer">Data ↗</a></div></div></div></article>
+          <article class="work-row"><div class="work-body"><div class="work-heading"><h3>Graph-based Fine-Tuning</h3><span class="mono work-year">2025</span></div><p>Connecting vision-language models with graph knowledge for explainable medical image analysis.</p><div class="work-meta"><span class="publication">MICCAI 2025 · Early accept</span><div class="links"><a href="https://arxiv.org/abs/2503.09808" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/GFT" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></div></article>
+          <article class="work-row"><div class="work-body"><div class="work-heading"><h3>DDEvENet</h3><span class="mono work-year">2025</span></div><p>Evidence-based ensembles for uncertainty-aware brain parcellation using diffusion MRI.</p><div class="work-meta"><span class="publication">Computerized Medical Imaging and Graphics</span><div class="links"><a href="https://doi.org/10.1016/j.compmedimag.2024.102489" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/DDEvENet" target="_blank" rel="noopener noreferrer">Code ↗</a></div></div></div></article>
         </div>
       </section>
 
       <section class="section" id="demos" aria-labelledby="demos-title">
-        <div class="section-label"><span class="mono section-index">02 /</span><h2 id="demos-title">Try the work</h2><p>A little more<br>hands-on.</p></div>
-        <div class="section-content demo-grid">
-          <article class="demo"><div class="demo-top mono"><span>01</span><span class="demo-status">HOSTED DEMO</span></div><h3>MELD playground</h3><p>Explore AI-generated text detection and token-level predictions.</p><a class="demo-action" href="https://anon-review-meld-2026-meld.static.hf.space/index.html" target="_blank" rel="noopener noreferrer">Open demo <span aria-hidden="true">↗</span></a></article>
-          <article class="demo" id="gft-demo"><div class="demo-top mono"><span>02</span><span class="demo-status">LOCAL DEMO</span></div><h3>Graph-grounded inference</h3><p>Run GFT with your own environment, model checkpoint, and data.</p><details class="demo-setup"><summary>View setup <span aria-hidden="true">+</span></summary><div><p>Follow the repository installation guide and prepare the Stage 2 checkpoint, then launch:</p><div class="command"><code>python -m gft.inference.deploy --model checkpoints/stage2</code><button type="button" class="copy-command" hidden>Copy</button></div><a href="https://github.com/d0ng231/GFT#quickstart" target="_blank" rel="noopener noreferrer">Installation &amp; requirements ↗</a><p class="copy-feedback" aria-live="polite"></p></div></details></article>
-        </div>
+        <div class="section-label"><h2 id="demos-title">Demo</h2></div>
+        <a class="demo-link" href="https://anon-review-meld-2026-meld.static.hf.space/index.html" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>MELD playground</h3>
+            <p>Explore AI text detection and token-level predictions.</p>
+          </div>
+          <span class="demo-action">Open demo <span aria-hidden="true">↗</span></span>
+        </a>
       </section>
 
       <section class="section background" aria-labelledby="background-title">
-        <div class="section-label"><span class="mono section-index">03 /</span><h2 id="background-title">Along the way</h2></div>
+        <div class="section-label"><h2 id="background-title">Background</h2></div>
         <div class="section-content"><div class="timeline-row"><span class="mono">2024 — NOW</span><div><h3>Cornell University</h3><p>PhD, Electrical &amp; Computer Engineering. Advised by Johannes C. Paetzold and Mert R. Sabuncu.</p></div></div><div class="timeline-row"><span class="mono">SUMMER 2026</span><div><h3>Overjet</h3><p>Machine Learning Intern · VLM post-training and reinforcement learning.</p></div></div><details class="more-background"><summary>Earlier <span aria-hidden="true">+</span></summary><div class="timeline-row"><span class="mono">2020 — 2024</span><div><h3>UESTC × University of Glasgow</h3><p>Joint undergraduate programme in electronic engineering. First-class honours.</p></div></div><div class="timeline-row"><span class="mono">SUMMER 2023</span><div><h3>Lenovo Research</h3><p>Research internship in component traceability and resource management.</p></div></div></details></div>
       </section>
 
       <section class="section photography" id="photography" aria-labelledby="photos-title">
-        <div class="section-label"><span class="mono section-index">04 /</span><h2 id="photos-title">Away from<br>the screen</h2><p>Places, light,<br>and geometry.</p></div>
-        <div class="section-content"><div class="gallery" id="photo-gallery" aria-label="Selected photographs">
-          <figure class="photo"><a href="assets/photos/city-reflections.jpg" data-watermark="light" aria-label="Enlarge Reflections &amp; remembrance"><img src="assets/photos/city-reflections-small.jpg" srcset="assets/photos/city-reflections-small.jpg 720w, assets/photos/city-reflections.jpg 1920w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1920" height="2400" loading="lazy" decoding="async" alt="A monochrome glass tower reflection paired with a small framed photograph of a rose at a memorial."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Reflections &amp; remembrance</span><span>2024</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/trees-and-stone.jpg" data-watermark="dark" aria-label="Enlarge Trees / stone"><img src="assets/photos/trees-and-stone-small.jpg" srcset="assets/photos/trees-and-stone-small.jpg 720w, assets/photos/trees-and-stone.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="2400" height="2400" loading="lazy" decoding="async" alt="Two black-and-white photographs of bare trees and angular mountain rocks, arranged diagonally on black."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Trees / stone</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/carved-light.jpg" data-watermark="dark" aria-label="Enlarge Carved light"><img src="assets/photos/carved-light-small.jpg" srcset="assets/photos/carved-light-small.jpg 720w, assets/photos/carved-light.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="2400" height="1219" loading="lazy" decoding="async" alt="Light traces the curved walls of a slot canyon in a wide black-and-white composition."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Carved light</span><span>2025</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/single-line.jpg" data-watermark="dark" aria-label="Enlarge A single line"><img src="assets/photos/single-line-small.jpg" srcset="assets/photos/single-line-small.jpg 720w, assets/photos/single-line.jpg 2160w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="2160" height="2160" loading="lazy" decoding="async" alt="A solitary streetlight against a gray sky, surrounded by a broad black border."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>A single line</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/lone-cypress.jpg" data-watermark="dark" aria-label="Enlarge A tree, reframed"><img src="assets/photos/lone-cypress-small.jpg" srcset="assets/photos/lone-cypress-small.jpg 720w, assets/photos/lone-cypress.jpg 2160w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="2160" height="2160" loading="lazy" decoding="async" alt="A lone coastal cypress with a pastel color inset over a monochrome sea and rocks."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>A tree, reframed</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/tidal-colors.jpg" data-watermark="dark" aria-label="Enlarge Tide &amp; color"><img src="assets/photos/tidal-colors-small.jpg" srcset="assets/photos/tidal-colors-small.jpg 720w, assets/photos/tidal-colors.jpg 1920w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1920" height="2400" loading="lazy" decoding="async" alt="A rocky island and gray sea layered over bands of orange and blue clouds."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Tide &amp; color</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/golden-gate.jpg" data-watermark="dark" aria-label="Enlarge Through the trees"><img src="assets/photos/golden-gate-small.jpg" srcset="assets/photos/golden-gate-small.jpg 720w, assets/photos/golden-gate.jpg 1800w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1800" height="2400" loading="lazy" decoding="async" alt="The Golden Gate Bridge framed vertically between two tree trunks within a black border."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Through the trees</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/suspended.jpg" data-watermark="dark" aria-label="Enlarge Suspended"><img src="assets/photos/suspended-small.jpg" srcset="assets/photos/suspended-small.jpg 720w, assets/photos/suspended.jpg 1703w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1703" height="1704" loading="lazy" decoding="async" alt="Two distant silhouettes cross a high suspension bridge above karst peaks in black and white."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Suspended</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/lake-study-one.jpg" data-watermark="light" aria-label="Enlarge Lake study I"><img src="assets/photos/lake-study-one-small.jpg" srcset="assets/photos/lake-study-one-small.jpg 720w, assets/photos/lake-study-one.jpg 1920w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1920" height="2400" loading="lazy" decoding="async" alt="A granite boulder in clear blue lake water, offset within a pale border."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Lake study I</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/lake-study-two.jpg" data-watermark="light" aria-label="Enlarge Lake study II"><img src="assets/photos/lake-study-two-small.jpg" srcset="assets/photos/lake-study-two-small.jpg 720w, assets/photos/lake-study-two.jpg 1920w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1920" height="2400" loading="lazy" decoding="async" alt="Clear lake water, granite boulders, and pine trees within a pale border."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Lake study II</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/three-horizons.jpg" data-watermark="dark" aria-label="Enlarge Three horizons"><img src="assets/photos/three-horizons-small.jpg" srcset="assets/photos/three-horizons-small.jpg 715w, assets/photos/three-horizons.jpg 1588w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1588" height="2400" loading="lazy" decoding="async" alt="Three stacked desert panoramas with red sandstone formations and muted overcast skies."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Three horizons</span><span>2025</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/sandstone-light.jpg" data-watermark="dark" aria-label="Enlarge Sandstone / light"><img src="assets/photos/sandstone-light-small.jpg" srcset="assets/photos/sandstone-light-small.jpg 720w, assets/photos/sandstone-light.jpg 1548w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1548" height="2272" loading="lazy" decoding="async" alt="Orange sandstone curves toward a patch of turquoise sky, framed by a dark red border."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Sandstone / light</span><span>2025</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/desert-fragments.jpg" data-watermark="dark" aria-label="Enlarge Desert fragments"><img src="assets/photos/desert-fragments-small.jpg" srcset="assets/photos/desert-fragments-small.jpg 720w, assets/photos/desert-fragments.jpg 1838w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1838" height="2400" loading="lazy" decoding="async" alt="Six photographs of desert cliffs, mountains, distant horizons, and the Arizona flag in a black-framed collage."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Desert fragments</span><span>2025</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/between-rock-and-sky.jpg" data-watermark="dark" aria-label="Enlarge Between rock &amp; sky"><img src="assets/photos/between-rock-and-sky-small.jpg" srcset="assets/photos/between-rock-and-sky-small.jpg 720w, assets/photos/between-rock-and-sky.jpg 1395w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1395" height="2078" loading="lazy" decoding="async" alt="A star-filled blue sky framed above and below by warm sandstone."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Between rock &amp; sky</span><span>2025</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/city-connections.jpg" data-watermark="dark" aria-label="Enlarge City connections"><img src="assets/photos/city-connections-small.jpg" srcset="assets/photos/city-connections-small.jpg 720w, assets/photos/city-connections.jpg 1920w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1920" height="2400" loading="lazy" decoding="async" alt="A Manhattan skyline above three vertical photographs of New York bridges and buildings."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>City connections</span><span>2024</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/afterglow.jpg" data-watermark="dark" aria-label="Enlarge Afterglow"><img src="assets/photos/afterglow-small.jpg" srcset="assets/photos/afterglow-small.jpg 720w, assets/photos/afterglow.jpg 2160w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="2160" height="2160" loading="lazy" decoding="async" alt="New York streets in golden light paired with the illuminated Empire State Building at night."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Afterglow</span><span>2024</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/day-and-night.jpg" data-watermark="dark" aria-label="Enlarge Day / night"><img src="assets/photos/day-and-night-small.jpg" srcset="assets/photos/day-and-night-small.jpg 720w, assets/photos/day-and-night.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="2400" height="2400" loading="lazy" decoding="async" alt="An orange sunset over mountain ridges and a blue star-filled sky arranged diagonally on black."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Day / night</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/moving-sky.jpg" data-watermark="light" aria-label="Enlarge The moving sky"><img src="assets/photos/moving-sky-small.jpg" srcset="assets/photos/moving-sky-small.jpg 720w, assets/photos/moving-sky.jpg 1741w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="1741" height="2400" loading="lazy" decoding="async" alt="Cyan star trails sweep above a dark tree canopy inside a wide white border."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>The moving sky</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/river-at-dusk.jpg" data-watermark="dark" aria-label="Enlarge River at dusk"><img src="assets/photos/river-at-dusk-small.jpg" srcset="assets/photos/river-at-dusk-small.jpg 720w, assets/photos/river-at-dusk.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="2400" height="2400" loading="lazy" decoding="async" alt="Small silhouetted rafts float on a golden river beneath layered karst peaks at dusk."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>River at dusk</span><span>2026</span></figcaption></figure>
-          <figure class="photo"><a href="assets/photos/fallen-color.jpg" data-watermark="dark" aria-label="Enlarge Fallen color"><img src="assets/photos/fallen-color-small.jpg" srcset="assets/photos/fallen-color-small.jpg 720w, assets/photos/fallen-color.jpg 2160w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px" width="2160" height="2160" loading="lazy" decoding="async" alt="Yellow, orange, and white autumn leaves on dark water, framed in black."><span class="watermark" aria-hidden="true">© Matt Li</span></a><figcaption><span>Fallen color</span><span>2026</span></figcaption></figure>
-        </div><div class="gallery-actions"><button type="button" class="gallery-toggle" aria-expanded="false" aria-controls="photo-gallery" hidden>View all 20 photographs <span aria-hidden="true">↗</span></button><p class="gallery-note mono">PLACES, LIGHT &amp; COMPOSITIONS <span>© MATT LI</span></p></div></div>
+        <div class="section-label"><h2 id="photos-title">Photography</h2></div>
+        <div class="section-content" id="photo-gallery">
+          <div class="gallery">
+            <figure class="photo">
+              <a href="assets/photos/karst-in-three-frames.jpg" data-watermark="dark" aria-label="Enlarge Karst in three frames">
+                <img src="assets/photos/karst-in-three-frames-small.jpg" srcset="assets/photos/karst-in-three-frames-small.jpg 720w, assets/photos/karst-in-three-frames.jpg 1080w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1080" height="1440" loading="lazy" decoding="async" alt="Three black-and-white panoramas of karst peaks step outward across a black background.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Karst in three frames</span><span class="photo-year">2026</span>
+                <span class="photo-place">Guilin, China</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/the-long-pour.jpg" data-watermark="dark" aria-label="Enlarge The long pour">
+                <img src="assets/photos/the-long-pour-small.jpg" srcset="assets/photos/the-long-pour-small.jpg 720w, assets/photos/the-long-pour.jpg 1802w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1802" height="2400" loading="lazy" decoding="async" alt="A tea server raises a long-spouted brass pot above the tables of an outdoor teahouse.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>The long pour</span><span class="photo-year">2026</span>
+                <span class="photo-place">Chengdu, China</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/snow-river.jpg" data-watermark="light" aria-label="Enlarge Winter crossing">
+                <img src="assets/photos/snow-river-small.jpg" srcset="assets/photos/snow-river-small.jpg 720w, assets/photos/snow-river.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1600" loading="lazy" decoding="async" alt="Four antelope stand beside a winding river on a broad snow-covered plain.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Winter crossing</span><span class="photo-year">2024</span>
+                <span class="photo-place">Nagqu, Tibet</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/planes-of-light.jpg" data-watermark="dark" aria-label="Enlarge Planes of light">
+                <img src="assets/photos/planes-of-light-small.jpg" srcset="assets/photos/planes-of-light-small.jpg 720w, assets/photos/planes-of-light.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="2216" loading="lazy" decoding="async" alt="An orange wall and a suspended pink cube sit beside a second photograph of receding green fluorescent tubes.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Planes of light</span><span class="photo-year">2025</span>
+                <span class="photo-place">Miami, Florida</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/still-sky.jpg" data-watermark="light" aria-label="Enlarge Still sky">
+                <img src="assets/photos/still-sky-small.jpg" srcset="assets/photos/still-sky-small.jpg 720w, assets/photos/still-sky.jpg 1741w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1741" height="2400" loading="lazy" decoding="async" alt="A dark treetop silhouettes a field of stars inside a broad white border.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Still sky</span><span class="photo-year">2026</span>
+                <span class="photo-place">Shenandoah, Virginia</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/green-curtain.jpg" data-watermark="dark" aria-label="Enlarge Green curtain">
+                <img src="assets/photos/green-curtain-small.jpg" srcset="assets/photos/green-curtain-small.jpg 720w, assets/photos/green-curtain.jpg 1617w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1617" height="2400" loading="lazy" decoding="async" alt="A seated singer and a double bass player perform in the warm light of a room hung with green curtains.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Green curtain</span><span class="photo-year">2025</span>
+                <span class="photo-place">New Orleans, Louisiana</span>
+              </figcaption>
+            </figure>
+          </div>
+          <button type="button" class="gallery-toggle" aria-expanded="false" aria-controls="more-photos" hidden>
+            <span class="gallery-label">View all 68 photographs</span> <span aria-hidden="true">↗</span>
+          </button>
+          <div class="gallery" id="more-photos">
+            <figure class="photo">
+              <a href="assets/photos/trees-and-stone.jpg" data-watermark="dark" aria-label="Enlarge Trees / stone">
+                <img src="assets/photos/trees-and-stone-small.jpg" srcset="assets/photos/trees-and-stone-small.jpg 720w, assets/photos/trees-and-stone.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="2400" loading="lazy" decoding="async" alt="Two black-and-white photographs of bare trees and angular mountain rocks, arranged diagonally on black.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Trees / stone</span><span class="photo-year">2026</span>
+                <span class="photo-place">Shenandoah, Virginia</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/single-line.jpg" data-watermark="dark" aria-label="Enlarge A single line">
+                <img src="assets/photos/single-line-small.jpg" srcset="assets/photos/single-line-small.jpg 720w, assets/photos/single-line.jpg 2160w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2160" height="2160" loading="lazy" decoding="async" alt="A solitary streetlight against a gray sky, surrounded by a broad black border.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>A single line</span><span class="photo-year">2026</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/lone-cypress.jpg" data-watermark="dark" aria-label="Enlarge A tree, reframed">
+                <img src="assets/photos/lone-cypress-small.jpg" srcset="assets/photos/lone-cypress-small.jpg 720w, assets/photos/lone-cypress.jpg 2160w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2160" height="2160" loading="lazy" decoding="async" alt="A lone coastal cypress with a pastel color inset over a monochrome sea and rocks.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>A tree, reframed</span><span class="photo-year">2026</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/tidal-colors.jpg" data-watermark="dark" aria-label="Enlarge Tide &amp; color">
+                <img src="assets/photos/tidal-colors-small.jpg" srcset="assets/photos/tidal-colors-small.jpg 720w, assets/photos/tidal-colors.jpg 1920w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1920" height="2400" loading="lazy" decoding="async" alt="A rocky island and gray sea layered over bands of orange and blue clouds.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Tide &amp; color</span><span class="photo-year">2026</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/golden-gate.jpg" data-watermark="dark" aria-label="Enlarge Through the trees">
+                <img src="assets/photos/golden-gate-small.jpg" srcset="assets/photos/golden-gate-small.jpg 720w, assets/photos/golden-gate.jpg 1800w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1800" height="2400" loading="lazy" decoding="async" alt="The Golden Gate Bridge framed vertically between two tree trunks within a black border.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Through the trees</span><span class="photo-year">2026</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/suspended.jpg" data-watermark="dark" aria-label="Enlarge Suspended">
+                <img src="assets/photos/suspended-small.jpg" srcset="assets/photos/suspended-small.jpg 720w, assets/photos/suspended.jpg 1703w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1703" height="1704" loading="lazy" decoding="async" alt="Two distant silhouettes cross a high suspension bridge above karst peaks in black and white.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Suspended</span><span class="photo-year">2026</span>
+                <span class="photo-place">Yangshuo, Guangxi</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/lake-study-one.jpg" data-watermark="light" aria-label="Enlarge Lake study I">
+                <img src="assets/photos/lake-study-one-small.jpg" srcset="assets/photos/lake-study-one-small.jpg 720w, assets/photos/lake-study-one.jpg 1920w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1920" height="2400" loading="lazy" decoding="async" alt="A granite boulder in clear blue lake water, offset within a pale border.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Lake study I</span><span class="photo-year">2026</span>
+                <span class="photo-place">Lake Tahoe</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/lake-study-two.jpg" data-watermark="light" aria-label="Enlarge Lake study II">
+                <img src="assets/photos/lake-study-two-small.jpg" srcset="assets/photos/lake-study-two-small.jpg 720w, assets/photos/lake-study-two.jpg 1920w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1920" height="2400" loading="lazy" decoding="async" alt="Clear lake water, granite boulders, and pine trees within a pale border.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Lake study II</span><span class="photo-year">2026</span>
+                <span class="photo-place">Lake Tahoe</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/day-and-night.jpg" data-watermark="dark" aria-label="Enlarge Day / night">
+                <img src="assets/photos/day-and-night-small.jpg" srcset="assets/photos/day-and-night-small.jpg 720w, assets/photos/day-and-night.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="2400" loading="lazy" decoding="async" alt="An orange sunset over mountain ridges and a blue star-filled sky arranged diagonally on black.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Day / night</span><span class="photo-year">2026</span>
+                <span class="photo-place">Shenandoah, Virginia</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/moving-sky.jpg" data-watermark="light" aria-label="Enlarge The moving sky">
+                <img src="assets/photos/moving-sky-small.jpg" srcset="assets/photos/moving-sky-small.jpg 720w, assets/photos/moving-sky.jpg 1741w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1741" height="2400" loading="lazy" decoding="async" alt="Cyan star trails sweep above a dark tree canopy inside a wide white border.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>The moving sky</span><span class="photo-year">2026</span>
+                <span class="photo-place">Shenandoah, Virginia</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/river-at-dusk.jpg" data-watermark="dark" aria-label="Enlarge River at dusk">
+                <img src="assets/photos/river-at-dusk-small.jpg" srcset="assets/photos/river-at-dusk-small.jpg 720w, assets/photos/river-at-dusk.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="2400" loading="lazy" decoding="async" alt="Small silhouetted rafts float on a golden river beneath layered karst peaks at dusk.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>River at dusk</span><span class="photo-year">2026</span>
+                <span class="photo-place">Yangshuo, Guangxi</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/fallen-color.jpg" data-watermark="dark" aria-label="Enlarge Fallen color">
+                <img src="assets/photos/fallen-color-small.jpg" srcset="assets/photos/fallen-color-small.jpg 720w, assets/photos/fallen-color.jpg 2160w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2160" height="2160" loading="lazy" decoding="async" alt="Yellow, orange, and white autumn leaves on dark water, framed in black.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Fallen color</span><span class="photo-year">2026</span>
+                <span class="photo-place">Bear Mountain, New York</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/fern-fronds.jpg" data-watermark="dark" aria-label="Enlarge Fern fronds">
+                <img src="assets/photos/fern-fronds-small.jpg" srcset="assets/photos/fern-fronds-small.jpg 720w, assets/photos/fern-fronds.jpg 1800w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1800" height="2400" loading="lazy" decoding="async" alt="A small brown shell rests among the green leaflets of a fern.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Fern fronds</span><span class="photo-year">2026</span>
+                <span class="photo-place">Sichuan, China</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/leaves-and-petals.jpg" data-watermark="dark" aria-label="Enlarge Leaves and petals">
+                <img src="assets/photos/leaves-and-petals-small.jpg" srcset="assets/photos/leaves-and-petals-small.jpg 720w, assets/photos/leaves-and-petals.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="2400" loading="lazy" decoding="async" alt="A yellow flower and a canopy of green leaves sit in opposite corners of a black field.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Leaves and petals</span><span class="photo-year">2026</span>
+                <span class="photo-place">Shenandoah, Virginia</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/cabin-light.jpg" data-watermark="light" aria-label="Enlarge Cabin light">
+                <img src="assets/photos/cabin-light-small.jpg" srcset="assets/photos/cabin-light-small.jpg 720w, assets/photos/cabin-light.jpg 1824w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1824" height="2400" loading="lazy" decoding="async" alt="Firelight warms two chairs and a cabin under a blue, star-filled patch of sky.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Cabin light</span><span class="photo-year">2026</span>
+                <span class="photo-place">Shenandoah, Virginia</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/orange-fleet.jpg" data-watermark="dark" aria-label="Enlarge Orange fleet">
+                <img src="assets/photos/orange-fleet-small.jpg" srcset="assets/photos/orange-fleet-small.jpg 720w, assets/photos/orange-fleet.jpg 1803w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1803" height="2400" loading="lazy" decoding="async" alt="Orange rowboats and their reflections line a dock under dense green trees.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Orange fleet</span><span class="photo-year">2026</span>
+                <span class="photo-place">Chengdu, China</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/crossing-trunks.jpg" data-watermark="dark" aria-label="Enlarge Crossing trunks">
+                <img src="assets/photos/crossing-trunks-small.jpg" srcset="assets/photos/crossing-trunks-small.jpg 720w, assets/photos/crossing-trunks.jpg 1800w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1800" height="2400" loading="lazy" decoding="async" alt="Two mature trees arch over the path beside a pond and a thatched pavilion.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Crossing trunks</span><span class="photo-year">2026</span>
+                <span class="photo-place">Chengdu, China</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/facade-in-peach.jpg" data-watermark="dark" aria-label="Enlarge Peach facade">
+                <img src="assets/photos/facade-in-peach-small.jpg" srcset="assets/photos/facade-in-peach-small.jpg 720w, assets/photos/facade-in-peach.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="2400" loading="lazy" decoding="async" alt="Bands of peach cladding and dark windows converge at a corner against a cyan sky.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Peach facade</span><span class="photo-year">2026</span>
+                <span class="photo-place">Boston, Massachusetts</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/carved-light.jpg" data-watermark="dark" aria-label="Enlarge Carved light">
+                <img src="assets/photos/carved-light-small.jpg" srcset="assets/photos/carved-light-small.jpg 720w, assets/photos/carved-light.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1219" loading="lazy" decoding="async" alt="Light traces the curved walls of a slot canyon in a wide black-and-white composition.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Carved light</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/three-horizons.jpg" data-watermark="dark" aria-label="Enlarge Three horizons">
+                <img src="assets/photos/three-horizons-small.jpg" srcset="assets/photos/three-horizons-small.jpg 715w, assets/photos/three-horizons.jpg 1588w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1588" height="2400" loading="lazy" decoding="async" alt="Three stacked desert panoramas with red sandstone formations and muted overcast skies.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Three horizons</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/sandstone-light.jpg" data-watermark="dark" aria-label="Enlarge Sandstone / light">
+                <img src="assets/photos/sandstone-light-small.jpg" srcset="assets/photos/sandstone-light-small.jpg 720w, assets/photos/sandstone-light.jpg 1548w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1548" height="2272" loading="lazy" decoding="async" alt="Orange sandstone curves toward a patch of turquoise sky, framed by a dark red border.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Sandstone / light</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/desert-fragments.jpg" data-watermark="dark" aria-label="Enlarge Desert fragments">
+                <img src="assets/photos/desert-fragments-small.jpg" srcset="assets/photos/desert-fragments-small.jpg 720w, assets/photos/desert-fragments.jpg 1838w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1838" height="2400" loading="lazy" decoding="async" alt="Six photographs of desert cliffs, mountains, distant horizons, and the Arizona flag in a black-framed collage.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Desert fragments</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/between-rock-and-sky.jpg" data-watermark="dark" aria-label="Enlarge Between rock &amp; sky">
+                <img src="assets/photos/between-rock-and-sky-small.jpg" srcset="assets/photos/between-rock-and-sky-small.jpg 720w, assets/photos/between-rock-and-sky.jpg 1395w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1395" height="2078" loading="lazy" decoding="async" alt="A star-filled blue sky framed above and below by warm sandstone.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Between rock &amp; sky</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/garden-in-stone.jpg" data-watermark="light" aria-label="Enlarge Garden in stone">
+                <img src="assets/photos/garden-in-stone-small.jpg" srcset="assets/photos/garden-in-stone-small.jpg 720w, assets/photos/garden-in-stone.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="2399" loading="lazy" decoding="async" alt="Four views pair pale stone figures and carved ornaments with deep green foliage.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Garden in stone</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/waterlines.jpg" data-watermark="dark" aria-label="Enlarge Waterlines">
+                <img src="assets/photos/waterlines-small.jpg" srcset="assets/photos/waterlines-small.jpg 720w, assets/photos/waterlines.jpg 1640w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1640" height="2400" loading="lazy" decoding="async" alt="Three horizontal frames show a bird above a marsh, a stone barge by the water, and a beach at dusk.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Waterlines</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/garden-fragments.jpg" data-watermark="dark" aria-label="Enlarge Garden fragments">
+                <img src="assets/photos/garden-fragments-small.jpg" srcset="assets/photos/garden-fragments-small.jpg 720w, assets/photos/garden-fragments.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="2399" loading="lazy" decoding="async" alt="Four frames gather a waterfront terrace, a weathered statue, a small lizard, and petals on water.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Garden fragments</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/jetty-tower.jpg" data-watermark="light" aria-label="Enlarge Jetty tower">
+                <img src="assets/photos/jetty-tower-small.jpg" srcset="assets/photos/jetty-tower-small.jpg 720w, assets/photos/jetty-tower.jpg 1811w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1811" height="2400" loading="lazy" decoding="async" alt="A red-and-white striped lifeguard tower stands on Miami Beach under a clearing sky.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Jetty tower</span><span class="photo-year">2025</span>
+                <span class="photo-place">Miami Beach, Florida</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/blue-windsocks.jpg" data-watermark="light" aria-label="Enlarge Blue windsocks">
+                <img src="assets/photos/blue-windsocks-small.jpg" srcset="assets/photos/blue-windsocks-small.jpg 720w, assets/photos/blue-windsocks.jpg 1615w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1615" height="2400" loading="lazy" decoding="async" alt="Pale blue fabric tubes stand in rows above the sunlit grass of a walled garden.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Blue windsocks</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/before-the-address.jpg" data-watermark="dark" aria-label="Enlarge Before the address">
+                <img src="assets/photos/before-the-address-small.jpg" srcset="assets/photos/before-the-address-small.jpg 720w, assets/photos/before-the-address.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="Flowers sit at the foot of an empty Cornell lectern in a black-and-white photograph.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Before the address</span><span class="photo-year">2025</span>
+                <span class="photo-place">Cornell University</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/red-neon.jpg" data-watermark="light" aria-label="Enlarge Red neon">
+                <img src="assets/photos/red-neon-small.jpg" srcset="assets/photos/red-neon-small.jpg 720w, assets/photos/red-neon.jpg 1874w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1874" height="2400" loading="lazy" decoding="async" alt="A red Hard Rock Cafe sign glows above an orange canopy at night.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Red neon</span><span class="photo-year">2025</span>
+                <span class="photo-place">New Orleans, Louisiana</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/smoke-and-neon.jpg" data-watermark="dark" aria-label="Enlarge Smoke and neon">
+                <img src="assets/photos/smoke-and-neon-small.jpg" srcset="assets/photos/smoke-and-neon-small.jpg 720w, assets/photos/smoke-and-neon.jpg 2399w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2399" height="2400" loading="lazy" decoding="async" alt="A fire engine stops on a narrow street beneath purple smoke and glowing restaurant signs.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Smoke and neon</span><span class="photo-year">2025</span>
+                <span class="photo-place">New Orleans, Louisiana</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/shop-window.jpg" data-watermark="dark" aria-label="Enlarge In the window">
+                <img src="assets/photos/shop-window-small.jpg" srcset="assets/photos/shop-window-small.jpg 720w, assets/photos/shop-window.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="Stuffed animals and a small white dress fill a warmly lit shop window.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>In the window</span><span class="photo-year">2025</span>
+                <span class="photo-place">New Orleans, Louisiana</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/snow-in-the-lamplight.jpg" data-watermark="light" aria-label="Enlarge Snow in the lamplight">
+                <img src="assets/photos/snow-in-the-lamplight-small.jpg" srcset="assets/photos/snow-in-the-lamplight-small.jpg 720w, assets/photos/snow-in-the-lamplight.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="A streetlamp catches falling snow above empty steps in black and white.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Snow in the lamplight</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/glass-and-amber.jpg" data-watermark="dark" aria-label="Enlarge Glass and amber">
+                <img src="assets/photos/glass-and-amber-small.jpg" srcset="assets/photos/glass-and-amber-small.jpg 675w, assets/photos/glass-and-amber.jpg 1500w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1500" height="2400" loading="lazy" decoding="async" alt="Warm-lit shelves of bottles repeat through a soft reflection in glass.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Glass and amber</span><span class="photo-year">2025</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/corner-at-night.jpg" data-watermark="dark" aria-label="Enlarge Corner at night">
+                <img src="assets/photos/corner-at-night-small.jpg" srcset="assets/photos/corner-at-night-small.jpg 720w, assets/photos/corner-at-night.jpg 1616w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1616" height="2400" loading="lazy" decoding="async" alt="A person sits beside a bicycle outside a warmly lit pink corner shop at night.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Corner at night</span><span class="photo-year">2025</span>
+                <span class="photo-place">New Orleans, Louisiana</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/crescent.jpg" data-watermark="dark" aria-label="Enlarge Crescent">
+                <img src="assets/photos/crescent-small.jpg" srcset="assets/photos/crescent-small.jpg 720w, assets/photos/crescent.jpg 1766w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1766" height="2400" loading="lazy" decoding="async" alt="A thin crescent moon hangs between violet clouds above a low, illuminated house.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Crescent</span><span class="photo-year">2025</span>
+                <span class="photo-place">Florida, USA</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/city-reflections.jpg" data-watermark="light" aria-label="Enlarge Reflections &amp; remembrance">
+                <img src="assets/photos/city-reflections-small.jpg" srcset="assets/photos/city-reflections-small.jpg 720w, assets/photos/city-reflections.jpg 1920w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1920" height="2400" loading="lazy" decoding="async" alt="A monochrome glass tower reflection paired with a small framed photograph of a rose at a memorial.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Reflections &amp; remembrance</span><span class="photo-year">2024</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/city-connections.jpg" data-watermark="dark" aria-label="Enlarge City connections">
+                <img src="assets/photos/city-connections-small.jpg" srcset="assets/photos/city-connections-small.jpg 720w, assets/photos/city-connections.jpg 1920w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1920" height="2400" loading="lazy" decoding="async" alt="A Manhattan skyline above three vertical photographs of New York bridges and buildings.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>City connections</span><span class="photo-year">2024</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/afterglow.jpg" data-watermark="dark" aria-label="Enlarge Afterglow">
+                <img src="assets/photos/afterglow-small.jpg" srcset="assets/photos/afterglow-small.jpg 720w, assets/photos/afterglow.jpg 2160w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2160" height="2160" loading="lazy" decoding="async" alt="New York streets in golden light paired with the illuminated Empire State Building at night.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Afterglow</span><span class="photo-year">2024</span>
+                <span class="photo-place">New York City</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/field-flower.jpg" data-watermark="dark" aria-label="Enlarge Field flower">
+                <img src="assets/photos/field-flower-small.jpg" srcset="assets/photos/field-flower-small.jpg 720w, assets/photos/field-flower.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="A smiling flower prop rises above a green field in front of an ochre wall.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Field flower</span><span class="photo-year">2024</span>
+                <span class="photo-place">Dali Prefecture, Yunnan</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/tower-after-dark.jpg" data-watermark="dark" aria-label="Enlarge Tower after dark">
+                <img src="assets/photos/tower-after-dark-small.jpg" srcset="assets/photos/tower-after-dark-small.jpg 720w, assets/photos/tower-after-dark.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="Tokyo Tower rises against a dark sky, its steel lattice lit red, violet, and blue.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Tower after dark</span><span class="photo-year">2024</span>
+                <span class="photo-place">Tokyo, Japan</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/clover-taxi.jpg" data-watermark="dark" aria-label="Enlarge Clover taxi">
+                <img src="assets/photos/clover-taxi-small.jpg" srcset="assets/photos/clover-taxi-small.jpg 720w, assets/photos/clover-taxi.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="Evening light falls across a burgundy taxi with a green clover on its door.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Clover taxi</span><span class="photo-year">2024</span>
+                <span class="photo-place">Kyoto, Japan</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/at-the-door.jpg" data-watermark="dark" aria-label="Enlarge At the door">
+                <img src="assets/photos/at-the-door-small.jpg" srcset="assets/photos/at-the-door-small.jpg 720w, assets/photos/at-the-door.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="A black cat sits at an office door beside a blue bowl and hand-lettered parking notices.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>At the door</span><span class="photo-year">2024</span>
+                <span class="photo-place">Kobe, Japan</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/station-at-dusk.jpg" data-watermark="dark" aria-label="Enlarge Station at dusk">
+                <img src="assets/photos/station-at-dusk-small.jpg" srcset="assets/photos/station-at-dusk-small.jpg 720w, assets/photos/station-at-dusk.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="A red traffic signal hangs among power lines outside Suma Station at dusk.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Station at dusk</span><span class="photo-year">2024</span>
+                <span class="photo-place">Kobe, Japan</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/high-shore.jpg" data-watermark="dark" aria-label="Enlarge High shore">
+                <img src="assets/photos/high-shore-small.jpg" srcset="assets/photos/high-shore-small.jpg 720w, assets/photos/high-shore.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1600" loading="lazy" decoding="async" alt="A blue lake curves away between bare mountain slopes beneath banks of cloud.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>High shore</span><span class="photo-year">2024</span>
+                <span class="photo-place">Nagqu, Tibet</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/under-the-span.jpg" data-watermark="dark" aria-label="Enlarge Under the span">
+                <img src="assets/photos/under-the-span-small.jpg" srcset="assets/photos/under-the-span-small.jpg 720w, assets/photos/under-the-span.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="The red underside of a bridge cuts diagonally across the illuminated riverfront.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Under the span</span><span class="photo-year">2024</span>
+                <span class="photo-place">Chongqing, China</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/margin-notes.jpg" data-watermark="dark" aria-label="Enlarge Margin notes">
+                <img src="assets/photos/margin-notes-small.jpg" srcset="assets/photos/margin-notes-small.jpg 720w, assets/photos/margin-notes.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="A pink painted figure hangs above a row of books on a wall covered in handwritten notes.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Margin notes</span><span class="photo-year">2024</span>
+                <span class="photo-place">Chongqing, China</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/winter-boardwalk.jpg" data-watermark="light" aria-label="Enlarge Winter boardwalk">
+                <img src="assets/photos/winter-boardwalk-small.jpg" srcset="assets/photos/winter-boardwalk-small.jpg 720w, assets/photos/winter-boardwalk.jpg 1631w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1631" height="2400" loading="lazy" decoding="async" alt="A narrow wooden path follows turquoise water through reddish winter brush.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Winter boardwalk</span><span class="photo-year">2024</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/snow-on-turquoise.jpg" data-watermark="dark" aria-label="Enlarge Snow on turquoise">
+                <img src="assets/photos/snow-on-turquoise-small.jpg" srcset="assets/photos/snow-on-turquoise-small.jpg 720w, assets/photos/snow-on-turquoise.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1667" loading="lazy" decoding="async" alt="Snow gathers on fine branches against the bright turquoise surface of a lake.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Snow on turquoise</span><span class="photo-year">2024</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/afternoon-bench.jpg" data-watermark="dark" aria-label="Enlarge On the bench">
+                <img src="assets/photos/afternoon-bench-small.jpg" srcset="assets/photos/afternoon-bench-small.jpg 720w, assets/photos/afternoon-bench.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1853" loading="lazy" decoding="async" alt="Four people sit on wooden benches against a white wall painted with dark red bands.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>On the bench</span><span class="photo-year">2024</span>
+                <span class="photo-place">Lhasa, Tibet</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/snowfield.jpg" data-watermark="dark" aria-label="Enlarge Quiet terrain">
+                <img src="assets/photos/snowfield-small.jpg" srcset="assets/photos/snowfield-small.jpg 720w, assets/photos/snowfield.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1600" loading="lazy" decoding="async" alt="A single power pylon punctuates a snow-covered plain beneath a mountain in black and white.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Quiet terrain</span><span class="photo-year">2024</span>
+                <span class="photo-place">Nagqu, Tibet</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/dusk-wires.jpg" data-watermark="dark" aria-label="Enlarge Wires at dusk">
+                <img src="assets/photos/dusk-wires-small.jpg" srcset="assets/photos/dusk-wires-small.jpg 720w, assets/photos/dusk-wires.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="Power lines lead toward fading pink light above a quiet street and parked cars.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Wires at dusk</span><span class="photo-year">2024</span>
+                <span class="photo-place">Nara, Japan</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/the-stretch.jpg" data-watermark="dark" aria-label="Enlarge The stretch">
+                <img src="assets/photos/the-stretch-small.jpg" srcset="assets/photos/the-stretch-small.jpg 720w, assets/photos/the-stretch.jpg 1600w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1600" height="2400" loading="lazy" decoding="async" alt="A tabby cat stretches a paw toward a fallen leaf on a stone path.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>The stretch</span><span class="photo-year">2024</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/submerged-branches.jpg" data-watermark="dark" aria-label="Enlarge Submerged branches">
+                <img src="assets/photos/submerged-branches-small.jpg" srcset="assets/photos/submerged-branches-small.jpg 698w, assets/photos/submerged-branches.jpg 1552w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1552" height="2400" loading="lazy" decoding="async" alt="Pale branches extend into clear turquoise water beneath autumn trees.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Submerged branches</span><span class="photo-year">2024</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/afternoon-leaves.jpg" data-watermark="light" aria-label="Enlarge Afternoon leaves">
+                <img src="assets/photos/afternoon-leaves-small.jpg" srcset="assets/photos/afternoon-leaves-small.jpg 720w, assets/photos/afternoon-leaves.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1610" loading="lazy" decoding="async" alt="A patch of warm light falls across a potted plant and the shelf beneath it.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Afternoon leaves</span><span class="photo-year">2021</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/roadside-pause.jpg" data-watermark="dark" aria-label="Enlarge Roadside pause">
+                <img src="assets/photos/roadside-pause-small.jpg" srcset="assets/photos/roadside-pause-small.jpg 720w, assets/photos/roadside-pause.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1610" loading="lazy" decoding="async" alt="Two cars pause between mountains and roadside signs under a wide, grainy monochrome sky.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Roadside pause</span><span class="photo-year">2021</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/roof-plan.jpg" data-watermark="dark" aria-label="Enlarge Roof plan">
+                <img src="assets/photos/roof-plan-small.jpg" srcset="assets/photos/roof-plan-small.jpg 720w, assets/photos/roof-plan.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1940" loading="lazy" decoding="async" alt="Seen straight from above, tiled roofs and small courtyards form a black-and-white pattern.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Roof plan</span><span class="photo-year">2021</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/bicycles-after-dark.jpg" data-watermark="dark" aria-label="Enlarge Bicycles after dark">
+                <img src="assets/photos/bicycles-after-dark-small.jpg" srcset="assets/photos/bicycles-after-dark-small.jpg 720w, assets/photos/bicycles-after-dark.jpg 1609w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="1609" height="2400" loading="lazy" decoding="async" alt="Two bicycles stand in a pool of yellow light beneath a lone streetlamp.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Bicycles after dark</span><span class="photo-year">2021</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/windowsill.jpg" data-watermark="dark" aria-label="Enlarge Windowsill">
+                <img src="assets/photos/windowsill-small.jpg" srcset="assets/photos/windowsill-small.jpg 720w, assets/photos/windowsill.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1610" loading="lazy" decoding="async" alt="A wooden planter and a green watering can stand on a sunlit windowsill.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Windowsill</span><span class="photo-year">2021</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/alpine-basin.jpg" data-watermark="dark" aria-label="Enlarge Alpine basin">
+                <img src="assets/photos/alpine-basin-small.jpg" srcset="assets/photos/alpine-basin-small.jpg 720w, assets/photos/alpine-basin.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1610" loading="lazy" decoding="async" alt="A small cairn stands on the shore of a pale blue lake beneath steep rocky peaks.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Alpine basin</span><span class="photo-year">2021</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/empty-swing.jpg" data-watermark="light" aria-label="Enlarge Empty swing">
+                <img src="assets/photos/empty-swing-small.jpg" srcset="assets/photos/empty-swing-small.jpg 720w, assets/photos/empty-swing.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1610" loading="lazy" decoding="async" alt="A wooden swing casts a long shadow on the grass at the foot of rolling hills.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Empty swing</span><span class="photo-year">2021</span>
+              </figcaption>
+            </figure>
+            <figure class="photo">
+              <a href="assets/photos/forest-falls.jpg" data-watermark="dark" aria-label="Enlarge Forest falls">
+                <img src="assets/photos/forest-falls-small.jpg" srcset="assets/photos/forest-falls-small.jpg 720w, assets/photos/forest-falls.jpg 2400w" sizes="(max-width:359px) calc(100vw - 32px), (max-width:520px) calc((100vw - 56px)/2), (max-width:760px) calc((100vw - 199px)/2), 253px"
+                     width="2400" height="1600" loading="lazy" decoding="async" alt="A white waterfall comes into view through overlapping branches and dark forest leaves.">
+                <span class="watermark" aria-hidden="true">© Matt Li</span>
+              </a>
+              <figcaption>
+                <span>Forest falls</span><span class="photo-year">2017</span>
+                <span class="photo-place">Anshun, Guizhou</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
     </main>
     <footer><a href="mailto:cl2733@cornell.edu">Let’s connect <span aria-hidden="true">↗</span></a><span class="mono">© <span id="year">2026</span> MATT LI</span><a class="back-top mono" href="#home">BACK TO TOP ↑</a></footer>
   </div>
-  <dialog class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-bar"><span class="mono" id="lightbox-count"></span><button type="button" class="lightbox-close" aria-label="Close photograph">Close <span aria-hidden="true">×</span></button></div><div class="lightbox-stage"><figure><div class="lightbox-photo"><img id="lightbox-image" alt=""><span class="watermark" aria-hidden="true">© Matt Li</span></div><figcaption id="lightbox-title"></figcaption></figure></div><div class="lightbox-controls"><button type="button" class="photo-prev" aria-label="Previous photograph">← Previous</button><span class="mono">SELECTED FRAMES</span><button type="button" class="photo-next" aria-label="Next photograph">Next →</button></div></dialog>
+  <dialog class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-bar"><span class="mono" id="lightbox-count"></span><button type="button" class="lightbox-close" aria-label="Close photograph">Close <span aria-hidden="true">×</span></button></div><div class="lightbox-stage"><figure><div class="lightbox-photo"><img id="lightbox-image" alt=""><span class="watermark" aria-hidden="true">© Matt Li</span></div><figcaption id="lightbox-title"></figcaption></figure></div><div class="lightbox-controls"><button type="button" class="photo-prev" aria-label="Previous photograph">← Previous</button><button type="button" class="photo-next" aria-label="Next photograph">Next →</button></div></dialog>
 </body>
 </html>

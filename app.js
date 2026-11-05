@@ -14,40 +14,19 @@ themeToggle.addEventListener('click', () => {
   syncTheme();
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
-const copyButton = document.querySelector('.copy-command');
-copyButton.hidden = false;
-copyButton.addEventListener('click', async () => {
-  const command = document.querySelector('.command code').textContent;
-  const feedback = document.querySelector('.copy-feedback');
-  try {
-    await navigator.clipboard.writeText(command);
-    feedback.textContent = 'Command copied.';
-  } catch {
-    feedback.textContent = 'Select and copy the command above.';
-    const range = document.createRange();
-    range.selectNodeContents(document.querySelector('.command code'));
-    const selection = window.getSelection();
-    selection.removeAllRanges();
-    selection.addRange(range);
-  }
-});
 const photos = [...document.querySelectorAll('.photo a')];
 const galleryToggle = document.querySelector('.gallery-toggle');
-const previewCount = 6;
-if (galleryToggle && photos.length > previewCount) {
+const morePhotos = document.getElementById('more-photos');
+if (galleryToggle && morePhotos?.childElementCount) {
+  morePhotos.hidden = true;
   galleryToggle.hidden = false;
-  function setGalleryExpanded(expanded) {
-    photos.forEach((photo, index) => { photo.closest('figure').hidden = !expanded && index >= previewCount; });
-    galleryToggle.setAttribute('aria-expanded', String(expanded));
-    galleryToggle.innerHTML = expanded
-      ? 'Show fewer photographs <span aria-hidden="true">−</span>'
-      : `View all ${photos.length} photographs <span aria-hidden="true">↗</span>`;
-  }
-  setGalleryExpanded(false);
   galleryToggle.addEventListener('click', () => {
-    const expanded = galleryToggle.getAttribute('aria-expanded') !== 'true';
-    setGalleryExpanded(expanded);
-    if (!expanded) galleryToggle.scrollIntoView({ block: 'nearest' });
+    const expanded = morePhotos.hidden;
+    morePhotos.hidden = !expanded;
+    galleryToggle.setAttribute('aria-expanded', String(expanded));
+    galleryToggle.querySelector('.gallery-label').textContent = expanded
+      ? 'Show fewer photographs' : `View all ${photos.length} photographs`;
+    galleryToggle.querySelector('[aria-hidden]').textContent = expanded ? '−' : '↗';
   });
 }
 const lightbox = document.querySelector('.lightbox');
