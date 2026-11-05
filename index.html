@@ -2,6 +2,8 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#141414">
@@ -14,14 +16,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://d0ng231.github.io/page/">
   <link rel="icon" type="image/svg+xml" href="assets/design/favicon.svg">
-  <script>
-    try {
-      if (localStorage.getItem('matt-theme') === 'light') {
-        document.documentElement.dataset.theme = 'light';
-        document.querySelector('meta[name="theme-color"]').content = '#f8f8f7';
-      }
-    } catch {}
-  </script>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
   <title>Matt Li — Research & Selected Work</title>
@@ -30,7 +25,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page-shell" id="home">
     <header class="site-header">
-      <nav aria-label="Main navigation"><a href="#research">Work</a><a href="#demos">Demo</a><a href="#photography">Photos</a></nav>
+      <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#demo">Demo</a><a href="#photos">Photos</a></nav>
       <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme" hidden><svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="6.5" stroke="currentColor"/><path d="M10 3.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
     </header>
     <main id="main">
@@ -48,8 +43,8 @@
         </div>
       </section>
 
-      <section class="section" id="research" aria-labelledby="work-title">
-        <div class="section-label"><h2 id="work-title">Selected work</h2></div>
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-label" id="research" data-legacy-anchor><h2 id="work-title">Selected work</h2></div>
         <div class="section-content work-list">
           <article class="work-row"><div class="work-body"><div class="work-heading"><h3>MELD</h3><span class="mono work-year">2026</span></div><p>One detector, multiple questions: AI text detection, generator attribution, rewrite identification, and token-level localization.</p><div class="work-meta"><span class="publication">ICLR 2027 · Under review</span><div class="links"><a href="https://arxiv.org/abs/2605.06903" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/d0ng231/MELD" target="_blank" rel="noopener noreferrer">Code ↗</a><a href="https://anon-review-meld-2026-meld.static.hf.space/index.html" target="_blank" rel="noopener noreferrer">Demo ↗</a></div></div></div></article>
           <article class="work-row"><div class="work-body"><div class="work-heading"><h3>Overjet-1</h3><span class="mono work-year">2026</span></div><p>A generalist vision-language model for grounded dental image understanding, spanning radiographs, photographs, and 3D CBCT.</p><div class="work-meta"><span class="publication">ICLR 2027 · Under review</span><span class="work-note">Research at Overjet</span></div></div></article>
@@ -59,8 +54,8 @@
         </div>
       </section>
 
-      <section class="section" id="demos" aria-labelledby="demos-title">
-        <div class="section-label"><h2 id="demos-title">Demo</h2></div>
+      <section class="section" id="demo" aria-labelledby="demos-title">
+        <div class="section-label" id="demos" data-legacy-anchor><h2 id="demos-title">Demo</h2></div>
         <a class="demo-link" href="https://anon-review-meld-2026-meld.static.hf.space/index.html" target="_blank" rel="noopener noreferrer">
           <div>
             <h3>MELD</h3>
@@ -75,8 +70,8 @@
         <div class="section-content"><div class="timeline-row"><span class="mono">2024 — NOW</span><div><h3>Cornell University</h3><p>PhD, Electrical &amp; Computer Engineering. Advised by Johannes C. Paetzold and Mert R. Sabuncu.</p></div></div><div class="timeline-row"><span class="mono">SUMMER 2026</span><div><h3>Overjet</h3><p>Machine Learning Intern · VLM post-training and reinforcement learning.</p></div></div><details class="more-background"><summary>Earlier <span aria-hidden="true">+</span></summary><div class="timeline-row"><span class="mono">2020 — 2024</span><div><h3>UESTC × University of Glasgow</h3><p>Joint undergraduate programme in electronic engineering. First-class honours.</p></div></div><div class="timeline-row"><span class="mono">SUMMER 2023</span><div><h3>Lenovo Research</h3><p>Research internship in component traceability and resource management.</p></div></div></details></div>
       </section>
 
-      <section class="section photography" id="photography" aria-labelledby="photos-title">
-        <div class="section-label"><h2 id="photos-title">Photography</h2></div>
+      <section class="section photography" id="photos" aria-labelledby="photos-title">
+        <div class="section-label" id="photography" data-legacy-anchor><h2 id="photos-title">Photography</h2></div>
         <div class="section-content" id="photo-gallery">
           <div class="gallery">
             <figure class="photo">

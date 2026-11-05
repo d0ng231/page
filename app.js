@@ -58,3 +58,12 @@ lightbox.addEventListener('keydown', event => {
   if (event.key === 'ArrowRight') { event.preventDefault(); showPhoto(activePhoto + 1); }
 });
 lightbox.addEventListener('close', () => opener?.focus({ preventScroll: true }));
+
+function followLegacyAnchor() {
+  const anchor = document.getElementById(location.hash.slice(1));
+  if (anchor?.hasAttribute('data-legacy-anchor')) {
+    location.replace('#' + anchor.closest('section').id);
+  }
+}
+window.addEventListener('hashchange', followLegacyAnchor);
+followLegacyAnchor();
