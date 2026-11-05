@@ -8,7 +8,25 @@ export const redirects = {
   'ISMRM-2024-uncertainty': '#research',
 };
 export function redirectDocument(destination) {
-  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=${destination}"><title>Matt Li — This page has moved</title><body style="background:#f8f8f7;color:#20201f;font:14px system-ui;padding:10vw"><p>This page has moved.</p><a style="color:inherit" href="${destination}">Continue to Matt Li’s website →</a></body></html>`;
+  return `<!doctype html>
+<html lang="en" style="color-scheme:dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta http-equiv="refresh" content="0;url=${destination}">
+  <title>Matt Li — This page has moved</title>
+  <script>
+    try {
+      if (localStorage.getItem('matt-theme') === 'light') document.documentElement.style.colorScheme = 'light';
+    } catch {}
+  </script>
+</head>
+<body style="background:light-dark(#f8f8f7,#141414);color:light-dark(#20201f,#e8e8e5);font:14px system-ui;padding:10vw">
+  <p>This page has moved.</p>
+  <a style="color:inherit" href="${destination}">Continue to Matt Li’s website →</a>
+</body>
+</html>`;
 }
 export async function build(output = join(projectRoot, 'dist')) {
   await rm(output, { recursive: true, force: true });

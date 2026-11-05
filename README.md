@@ -24,7 +24,7 @@ Open `http://127.0.0.1:4173/page/`. The root URL also works. Without npm, use `n
 - `assets/design/`: Manrope font and OFL license, favicon, social card.
 - `archive/indigo/`: preserved original Jekyll source, excluded from publication.
 
-The Demo section links to the hosted MELD playground. GFT appears in Selected work.
+The Demo section links to MELD. GFT appears in Selected work.
 
 Photographs have English titles. Years come from the saved photograph or its reference series. Captions include a city, park, or region when supported by Photos, the original series, or visible place signage. The faint `© Matt Li` watermark is a website overlay on each thumbnail and enlarged view; it is not burned into the image file. Its color follows the photograph's border, independently of the site theme. Six images appear initially, with a button to reveal the whole gallery. All photographs are accessible without JavaScript. When adding images, preserve their aspect ratio, add descriptive alternative text, and include the watermark in the same image wrapper. Only add approved website derivatives to `assets/photos/` because the build copies that directory.
 
@@ -34,7 +34,7 @@ The latest CV's phone number and private Google Doc URL are not included in the 
 
 ## Accessibility
 
-All primary content is available without JavaScript. Themes persist when local storage is available. Photo dialogs support Escape, arrow keys, focus trapping, and return focus to the selected thumbnail. No continuous animation runs. Reduced-motion preferences disable the small transitions.
+All primary content is available without JavaScript. The site opens in dark mode and remembers a visitor's theme choice when local storage is available. Photo dialogs support Escape, arrow keys, focus trapping, and return focus to the selected thumbnail. No continuous animation runs. Reduced-motion preferences disable the small transitions.
 
 ## GitHub Pages
 
