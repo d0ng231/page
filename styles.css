@@ -43,40 +43,13 @@
 .portrait-link {
   position: relative;
   display: block;
-  padding: 7px 7px 0;
+  padding: 7px;
   border: 1px solid transparent;
   background: linear-gradient(var(--paper), var(--paper)) padding-box,
     linear-gradient(145deg, var(--muted) -65%, var(--line) 42%, var(--paper)) border-box;
   box-shadow: var(--shadow);
-  cursor: zoom-in;
 }
 .intro-portrait img { display: block; width: 100%; height: auto; }
-.portrait-action {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 7px;
-  padding: 7px 2px 8px;
-  color: var(--muted);
-  font-size: 10px;
-  line-height: 1;
-}
-.portrait-link:is(:hover, :focus-visible) .portrait-action { color: var(--ink); }
-.expand-mark {
-  display: inline-block;
-  position: relative;
-  width: 10px;
-  height: 10px;
-}
-.expand-mark::before, .expand-mark::after {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  border: solid currentColor;
-}
-.expand-mark::before { top: 0; right: 0; border-width: 1px 1px 0 0; }
-.expand-mark::after { bottom: 0; left: 0; border-width: 0 0 1px 1px; }
 .intro + .section { margin-top: clamp(40px, 4.5vw, 64px); }
 
 .lightbox[data-portrait] :is(#lightbox-count, .lightbox-controls, .watermark) { display: none; }
