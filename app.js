@@ -4,7 +4,7 @@ function syncTheme() {
   const dark = root.dataset.theme === 'dark';
   themeToggle.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} theme`);
   themeToggle.title = `Switch to ${dark ? 'light' : 'dark'} theme`;
-  document.querySelector('meta[name="theme-color"]').content = dark ? '#141414' : '#f8f8f7';
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#0d0e0f' : '#f8f8f7';
 }
 themeToggle.hidden = false;
 syncTheme();

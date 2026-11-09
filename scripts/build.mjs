@@ -23,7 +23,7 @@ export function redirectDocument(route, inDirectory) {
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#141414">
+  <meta name="theme-color" content="#0d0e0f">
   <meta name="robots" content="noindex">
   <meta http-equiv="refresh" content="0;url=${destination}">
   <title>Matt Li — This page has moved</title>
@@ -38,9 +38,10 @@ export function redirectDocument(route, inDirectory) {
 
 export function publicFiles(index) {
   const files = new Set([
-    'index.html', '404.html', 'styles.css', 'theme.js', 'app.js', 'robots.txt', 'sitemap.xml', '.nojekyll',
+    'index.html', '404.html', 'styles.css', 'theme.js', 'app.js', 'terrain.js', 'robots.txt', 'sitemap.xml', '.nojekyll',
     'assets/design/favicon.svg', 'assets/design/social-card.png', 'assets/design/social-card.svg',
     'assets/design/manrope-latin.woff2', 'assets/design/Manrope-OFL.txt',
+    'assets/design/terrain.png',
     // Published photo links from the original gallery are still in use.
     'assets/photos/chongqing.jpg', 'assets/photos/chongqing-small.jpg',
     'assets/photos/urban-layers.jpg', 'assets/photos/urban-layers-small.jpg',
