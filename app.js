@@ -31,31 +31,90 @@ if (galleryToggle && morePhotos?.childElementCount) {
 }
 const lightbox = document.querySelector('.lightbox');
 const largeImage = document.querySelector('#lightbox-image');
-let activePhoto = 0;
+const title = document.querySelector('#lightbox-title');
+const count = document.querySelector('#lightbox-count');
+const portrait = document.querySelector('.portrait-link');
+const portraitImage = portrait.querySelector('img');
+const mount = portrait.closest('.intro-portrait');
+const pointerTilt = matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+let activePhoto = null;
 let opener = null;
-function showPhoto(index) {
+
+function levelPortrait() {
+  portrait.style.removeProperty('--pitch');
+  portrait.style.removeProperty('--yaw');
+}
+mount.addEventListener('pointermove', event => {
+  if (!pointerTilt.matches || event.pointerType === 'touch') return;
+  const bounds = mount.getBoundingClientRect();
+  const x = (event.clientX - bounds.left) / bounds.width - .5;
+  const y = (event.clientY - bounds.top) / bounds.height - .5;
+  portrait.style.setProperty('--pitch', `${-4 * y}deg`);
+  portrait.style.setProperty('--yaw', `${5 * x}deg`);
+});
+mount.addEventListener('pointerleave', levelPortrait);
+mount.addEventListener('pointercancel', levelPortrait);
+pointerTilt.addEventListener('change', levelPortrait);
+
+function showGalleryPhoto(index) {
   activePhoto = (index + photos.length) % photos.length;
   const link = photos[activePhoto];
-  const thumbnail = link.querySelector('img');
   largeImage.src = link.href;
-  largeImage.alt = thumbnail.alt;
+  largeImage.alt = link.querySelector('img').alt;
   largeImage.closest('.lightbox-photo').dataset.watermark = link.dataset.watermark;
-  document.querySelector('#lightbox-title').textContent = [...link.closest('figure').querySelectorAll('figcaption span')].map(span => span.textContent).join(' · ');
-  document.querySelector('#lightbox-count').textContent = `${String(activePhoto + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
+  title.textContent = [...link.closest('figure').querySelectorAll('figcaption span')].map(span => span.textContent).join(' · ');
+  count.textContent = `${String(activePhoto + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
 }
-photos.forEach((photo, index) => photo.addEventListener('click', event => {
+
+function showPortrait() {
+  activePhoto = null;
+  title.textContent = 'Matt in the forest';
+  count.textContent = '';
+  largeImage.alt = portraitImage.alt;
+  largeImage.src = portraitImage.currentSrc || portraitImage.src;
+  if (largeImage.src === portrait.href) return;
+  const full = new Image();
+  full.onload = () => {
+    if (activePhoto === null) largeImage.src = full.src;
+  };
+  full.src = portrait.href;
+}
+
+function changeViewer(update) {
+  if (activePhoto === null && !reducedMotion.matches && document.startViewTransition) {
+    document.startViewTransition(update);
+  } else {
+    update();
+  }
+}
+
+function openPhoto(event, index) {
   if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || typeof lightbox.showModal !== 'function') return;
   event.preventDefault();
-  opener = photo;
-  showPhoto(index);
-  lightbox.showModal();
-}));
-document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
-document.querySelector('.photo-prev').addEventListener('click', () => showPhoto(activePhoto - 1));
-document.querySelector('.photo-next').addEventListener('click', () => showPhoto(activePhoto + 1));
+  opener = event.currentTarget;
+  lightbox.toggleAttribute('data-portrait', index === null);
+  if (index === null) showPortrait();
+  else showGalleryPhoto(index);
+  changeViewer(() => lightbox.showModal());
+}
+portrait.addEventListener('click', event => openPhoto(event, null));
+photos.forEach((photo, index) => photo.addEventListener('click', event => openPhoto(event, index)));
+
+function closePhoto() { changeViewer(() => lightbox.close()); }
+document.querySelector('.lightbox-close').addEventListener('click', closePhoto);
+lightbox.addEventListener('cancel', event => {
+  if (activePhoto === null) {
+    event.preventDefault();
+    closePhoto();
+  }
+});
+document.querySelector('.photo-prev').addEventListener('click', () => showGalleryPhoto(activePhoto - 1));
+document.querySelector('.photo-next').addEventListener('click', () => showGalleryPhoto(activePhoto + 1));
 lightbox.addEventListener('keydown', event => {
-  if (event.key === 'ArrowLeft') { event.preventDefault(); showPhoto(activePhoto - 1); }
-  if (event.key === 'ArrowRight') { event.preventDefault(); showPhoto(activePhoto + 1); }
+  if (activePhoto === null) return;
+  if (event.key === 'ArrowLeft') { event.preventDefault(); showGalleryPhoto(activePhoto - 1); }
+  if (event.key === 'ArrowRight') { event.preventDefault(); showGalleryPhoto(activePhoto + 1); }
 });
 lightbox.addEventListener('close', () => opener?.focus({ preventScroll: true }));
 

@@ -20,7 +20,6 @@ Open `http://127.0.0.1:4173/page/`. The root URL also works. Without npm, use `n
 - `index.html`: biography, five projects, the MELD demo, background, and a photography gallery. Research content was checked against the CV updated October 29, 2026. Under-review papers are labeled accordingly.
 - `styles.css`: compact responsive layout, light/dark themes, subtle hover feedback, and reduced-motion support.
 - `theme.js` restores the saved theme before the first paint. `app.js` handles the theme switch, gallery, photo viewer, and older section bookmarks.
-- `terrain.js` draws a WebGL 2 relief from two skyline profiles sampled from Matt’s Guilin triptych. The front-to-back spacing and side lighting are composed for the homepage.
 - `assets/photos/`: responsive web copies of photographs selected by Matt from Apple Photos and his edited files. Full compositions, borders, and collages are retained. Large images use up to 2400 pixels on the long edge, without upscaling; thumbnails use up to 720 pixels in width. Web exports omit EXIF and location metadata; library originals are unchanged. The previous four image URLs remain available for existing links.
 - `assets/design/`: Manrope font and OFL license, favicon, social card.
 - `archive/indigo/`: preserved original Jekyll source, excluded from publication.
@@ -29,13 +28,13 @@ The Demo section links to MELD. GFT appears in Selected work.
 
 Photographs have English titles. Years come from the saved photograph or its reference series. Captions include a city, park, or region when supported by Photos, the original series, or visible place signage. The faint `© Matt Li` watermark is a website overlay on each thumbnail and enlarged view; it is not burned into the image file. Its color follows the photograph's border, independently of the site theme. Six images appear initially, with a button to reveal the whole gallery. All photographs are accessible without JavaScript. When adding images, preserve their aspect ratio, add descriptive alternative text, and include the watermark in the same image wrapper. The build publishes the referenced JPEGs and four explicitly listed legacy images.
 
-The homepage introduction uses the user-supplied forest photograph, showing Matt from behind, as its only personal portrait. Preserve its full composition and colors; do not add a front-facing portrait. The unwatermarked portrait appears beside the introduction on larger screens and above the name on phones. Its responsive web copies also omit private metadata.
+The forest portrait shows Matt from behind, beside the introduction on larger screens and above the name on phones. Its full composition and original colors carry through to its standalone enlarged view. Both views are unwatermarked. The responsive web copies omit private metadata.
 
 The latest CV's phone number and private Google Doc URL are not included in the public site. Update project links and paper statuses as needed. The archived theme retains historical sources and links but is not served.
 
 ## Accessibility
 
-All primary content is available without JavaScript. The site opens in dark mode and remembers a visitor's theme choice when local storage is available. Photo dialogs support Escape, arrow keys, focus trapping, and return focus to the selected thumbnail. The relief settles after its opening light sweep and responds to pointer movement and scrolling while visible. Reduced motion, disabled JavaScript, and browsers without WebGL 2 use a still frame from the same scene.
+All primary content is available without JavaScript. The site opens in dark mode and remembers a visitor's theme choice when local storage is available. The portrait links directly to its full-size JPEG. With JavaScript it opens in the photo viewer, which supports Escape and returns focus to the opening link. Arrow keys move between photographs in the gallery. Fine pointers can tilt the portrait frame. Browsers with View Transitions can expand the print from its position on the page. Reduced motion keeps the print level and opens it immediately.
 
 ## GitHub Pages
 

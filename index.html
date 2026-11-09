@@ -19,7 +19,6 @@
   <script src="theme.js"></script>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
-  <script src="terrain.js" defer></script>
   <title>Matt Li — Research & Selected Work</title>
 </head>
 <body>
@@ -33,7 +32,10 @@
       <section class="intro" id="about" aria-labelledby="intro-title">
         <div class="intro-layout">
           <figure class="intro-portrait">
-            <img src="assets/photos/matt-in-the-forest-small.jpg" srcset="assets/photos/matt-in-the-forest-small.jpg 720w, assets/photos/matt-in-the-forest.jpg 1600w" sizes="(max-width:640px) calc(100vw - 44px), (max-width:900px) 240px, 280px" width="1600" height="1061" fetchpriority="high" decoding="async" alt="Matt seen from behind, looking across a sunlit pine forest.">
+            <a class="portrait-link" href="assets/photos/matt-in-the-forest.jpg" aria-label="View photograph of Matt in the forest">
+              <img src="assets/photos/matt-in-the-forest-small.jpg" srcset="assets/photos/matt-in-the-forest-small.jpg 720w, assets/photos/matt-in-the-forest.jpg 1600w" sizes="(max-width:640px) calc(100vw - 60px), (max-width:840px) 218px, (max-width:1200px) 26vw, 320px" width="1600" height="1061" fetchpriority="high" decoding="async" alt="Matt seen from behind, looking across a sunlit pine forest.">
+              <span class="portrait-action" aria-hidden="true">View photograph <span class="expand-mark"></span></span>
+            </a>
           </figure>
           <div class="intro-copy">
             <h1 id="intro-title">Matt Li</h1>
@@ -41,10 +43,6 @@
             <p class="intro-description">I work on multimodal models that reason with visual and structured evidence. Currently exploring VLM post-training, reinforcement learning, and 3D grounding.</p>
             <div class="intro-links"><a href="mailto:cl2733@cornell.edu">Email <span aria-hidden="true">↗</span></a><a href="https://github.com/d0ng231" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://scholar.google.com/citations?user=BFxNMooAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/matt-c-l-79a921210/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
           </div>
-        </div>
-        <div class="terrain" aria-hidden="true">
-          <img src="assets/design/terrain.png" width="2240" height="280" alt="" decoding="async" fetchpriority="low">
-          <canvas></canvas>
         </div>
       </section>
 

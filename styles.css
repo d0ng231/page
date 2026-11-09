@@ -20,12 +20,11 @@
 .gallery-toggle[aria-expanded="true"] { margin-bottom: 24px; }
 .gallery-toggle:hover{border-color:var(--ink)}
 .gallery-toggle [aria-hidden]{color:var(--muted)}
-/* The relief sits below the introduction and shares its open background. */
 .intro { padding-top: clamp(42px, 5vw, 72px); }
 .intro-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(220px, 23vw, 280px);
-  gap: clamp(32px, 5vw, 74px);
+  grid-template-columns: minmax(0, 1fr) clamp(232px, 28vw, 336px);
+  gap: clamp(32px, 4.5vw, 64px);
   align-items: center;
 }
 .intro-copy { grid-area: 1 / 1; min-width: 0; }
@@ -39,41 +38,69 @@
 }
 .intro-portrait {
   grid-area: 1 / 2;
+  perspective: 880px;
+}
+.portrait-link {
   position: relative;
-  padding: 5px;
-  line-height: 0;
-  background: var(--paper);
-  border: 1px solid var(--line);
+  display: block;
+  padding: 7px 7px 0;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--paper), var(--paper)) padding-box,
+    linear-gradient(145deg, var(--muted) -65%, var(--line) 42%, var(--paper)) border-box;
   box-shadow: var(--shadow);
+  cursor: zoom-in;
 }
 .intro-portrait img { display: block; width: 100%; height: auto; }
-.terrain {
+.portrait-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  padding: 7px 2px 8px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1;
+}
+.portrait-link:is(:hover, :focus-visible) .portrait-action { color: var(--ink); }
+.expand-mark {
+  display: inline-block;
   position: relative;
-  isolation: isolate;
-  pointer-events: none;
-  height: clamp(126px, 13.5vw, 174px);
-  margin: 8px -1.5% 0;
-  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+  width: 10px;
+  height: 10px;
 }
-.terrain img, .terrain canvas {
+.expand-mark::before, .expand-mark::after {
+  content: "";
   position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 4px;
+  height: 4px;
+  border: solid currentColor;
 }
-.terrain canvas, .terrain[data-live] img { visibility: hidden; }
-.terrain[data-live] canvas { visibility: visible; }
-:root[data-theme=light] .terrain { filter: invert(1); opacity: .73; }
-.intro + .section { margin-top: clamp(12px, 1.5vw, 22px); }
+.expand-mark::before { top: 0; right: 0; border-width: 1px 1px 0 0; }
+.expand-mark::after { bottom: 0; left: 0; border-width: 0 0 1px 1px; }
+.intro + .section { margin-top: clamp(40px, 4.5vw, 64px); }
+
+.lightbox[data-portrait] :is(#lightbox-count, .lightbox-controls, .watermark) { display: none; }
+.lightbox[data-portrait] .lightbox-bar { justify-content: flex-end; }
+.lightbox[data-portrait] .lightbox-stage { container-type: size; }
+.lightbox[data-portrait] .lightbox-stage figure { width: 100%; --caption-space: 2rem; }
+.lightbox[data-portrait] figcaption { min-height: var(--caption-space); }
+/* Keep the displayed print the same size while its larger file loads. */
+.lightbox[data-portrait] .lightbox-photo {
+  width: min(100%, 1600px, calc((100vh - 185px) * 1600 / 1061));
+  width: min(100%, 1600px, calc((100cqh - var(--caption-space)) * 1600 / 1061));
+}
+.lightbox[data-portrait] #lightbox-image {
+  width: 100%;
+  max-height: none;
+  aspect-ratio: 1600 / 1061;
+}
 @media (max-width: 640px) {
   .intro { padding-top: 28px; }
   .intro-layout { grid-template-columns: minmax(0, 1fr); gap: 27px; }
   .intro-portrait { grid-area: 1 / 1; }
   .intro-copy { grid-area: 2 / 1; }
   .intro h1 { font-size: 48px; }
-  .terrain { height: clamp(96px, 23vw, 134px); margin-top: 12px; }
+  .intro + .section { margin-top: 36px; }
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 
@@ -121,6 +148,10 @@
   .demo-link:hover .demo-action span { transform: translate(2px, -2px); }
 }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .portrait-link {
+    transform: rotateX(var(--pitch, 0deg)) rotateY(var(--yaw, 0deg));
+    transition: transform 200ms ease-out;
+  }
   .photo a {
     transform-origin: center 72%;
     transition: transform 320ms cubic-bezier(.2,.7,.3,1), box-shadow 320ms ease;
@@ -131,10 +162,20 @@
   }
 }
 @media (prefers-reduced-motion: no-preference) {
+  .portrait-link img, .lightbox[open][data-portrait] #lightbox-image {
+    view-transition-name: forest-print;
+  }
+  :root:has(.lightbox[open][data-portrait]) .portrait-link img {
+    view-transition-name: none;
+  }
+  ::view-transition-group(forest-print) {
+    animation-duration: 360ms;
+    animation-timing-function: cubic-bezier(.22, .75, .25, 1);
+  }
   .site-header nav a::after, .demo-action span {
     transition: transform 180ms ease-out;
   }
-  .intro-copy, .intro-portrait, .lightbox[open] .lightbox-stage {
+  .lightbox[open]:not([data-portrait]) .lightbox-stage {
     animation: settle 380ms cubic-bezier(.18, .65, .3, 1);
   }
   @keyframes settle {
@@ -143,6 +184,7 @@
   }
 }
 @media (max-width: 520px) {
+  .lightbox[data-portrait] .lightbox-stage { margin-inline: -16px; }
   .demo-link { gap: 14px; }
   .demo-link h3 { font-size: 15px; }
   .demo-action, .demo-link p { font-size: 11px; }
