@@ -52,21 +52,24 @@
 .intro-portrait img { display: block; width: 100%; height: auto; }
 .intro + .section { margin-top: clamp(40px, 4.5vw, 64px); }
 
+.lightbox-stage { container-type: size; }
+.lightbox-stage figure { width: 100%; }
+.lightbox-stage figcaption { width: 100%; text-align: center; }
+/* Fit the image and its caption together without changing the image's proportions. */
+.lightbox-photo {
+  width: min(100%, var(--photo-width), calc((100vh - 200px) * var(--photo-ratio, 1)));
+  width: min(100%, var(--photo-width), calc((100cqh - var(--caption-height, 2rem)) * var(--photo-ratio, 1)));
+  aspect-ratio: var(--photo-ratio, 1);
+  flex-shrink: 0;
+}
+.lightbox-photo img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+.lightbox-photo[aria-busy="true"] > * { visibility: hidden; }
 .lightbox[data-portrait] :is(#lightbox-count, .lightbox-controls, .watermark) { display: none; }
 .lightbox[data-portrait] .lightbox-bar { justify-content: flex-end; }
-.lightbox[data-portrait] .lightbox-stage { container-type: size; }
-.lightbox[data-portrait] .lightbox-stage figure { width: 100%; --caption-space: 2rem; }
-.lightbox[data-portrait] figcaption { min-height: var(--caption-space); }
-/* Keep the displayed print the same size while its larger file loads. */
-.lightbox[data-portrait] .lightbox-photo {
-  width: min(100%, 1600px, calc((100vh - 185px) * 1600 / 1061));
-  width: min(100%, 1600px, calc((100cqh - var(--caption-space)) * 1600 / 1061));
-}
-.lightbox[data-portrait] #lightbox-image {
-  width: 100%;
-  max-height: none;
-  aspect-ratio: 1600 / 1061;
-}
 @media (max-width: 640px) {
   .intro { padding-top: 28px; }
   .intro-layout { grid-template-columns: minmax(0, 1fr); gap: 27px; }

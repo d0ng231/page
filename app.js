@@ -31,15 +31,64 @@ if (galleryToggle && morePhotos?.childElementCount) {
 }
 const lightbox = document.querySelector('.lightbox');
 const largeImage = document.querySelector('#lightbox-image');
+const imageFrame = largeImage.closest('.lightbox-photo');
 const title = document.querySelector('#lightbox-title');
 const count = document.querySelector('#lightbox-count');
 const portrait = document.querySelector('.portrait-link');
-const portraitImage = portrait.querySelector('img');
 const mount = portrait.closest('.intro-portrait');
 const pointerTilt = matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 let activePhoto = null;
 let opener = null;
+let imageRequest = 0;
+
+new ResizeObserver(() => {
+  if (lightbox.open) {
+    lightbox.style.setProperty('--caption-height', `${Math.ceil(title.getBoundingClientRect().height)}px`);
+  }
+}).observe(title);
+
+function loadPhoto(link, caption) {
+  const request = ++imageRequest;
+  const thumbnail = link.querySelector('img');
+  const width = Number(thumbnail.getAttribute('width'));
+  const height = Number(thumbnail.getAttribute('height'));
+  const full = new Image();
+  let fullFailed = false;
+  const previewReady = thumbnail.complete && thumbnail.naturalWidth > 0;
+
+  lightbox.style.setProperty('--photo-ratio', String(width / height));
+  lightbox.style.setProperty('--photo-width', `${width}px`);
+  largeImage.width = width;
+  largeImage.height = height;
+  largeImage.alt = thumbnail.alt;
+  imageFrame.setAttribute('aria-busy', String(!previewReady));
+  title.textContent = previewReady ? caption : `${caption} · Loading…`;
+
+  function imageUnavailable() {
+    if (request !== imageRequest) return;
+    imageFrame.setAttribute('aria-busy', 'false');
+    title.textContent = `${caption} · Image unavailable. Please try again.`;
+  }
+  largeImage.onload = () => {
+    if (request !== imageRequest) return;
+    imageFrame.setAttribute('aria-busy', 'false');
+    title.textContent = caption;
+  };
+  largeImage.onerror = () => {
+    if (fullFailed) imageUnavailable();
+  };
+  full.onload = () => {
+    if (request !== imageRequest) return;
+    largeImage.src = full.src;
+  };
+  full.onerror = () => {
+    fullFailed = true;
+    if (largeImage.complete && !largeImage.naturalWidth) imageUnavailable();
+  };
+  largeImage.src = thumbnail.currentSrc || thumbnail.src;
+  full.src = link.href;
+}
 
 function levelPortrait() {
   portrait.style.removeProperty('--pitch');
@@ -60,25 +109,16 @@ pointerTilt.addEventListener('change', levelPortrait);
 function showGalleryPhoto(index) {
   activePhoto = (index + photos.length) % photos.length;
   const link = photos[activePhoto];
-  largeImage.src = link.href;
-  largeImage.alt = link.querySelector('img').alt;
-  largeImage.closest('.lightbox-photo').dataset.watermark = link.dataset.watermark;
-  title.textContent = [...link.closest('figure').querySelectorAll('figcaption span')].map(span => span.textContent).join(' · ');
+  imageFrame.dataset.watermark = link.dataset.watermark;
+  const caption = [...link.closest('figure').querySelectorAll('figcaption span')].map(span => span.textContent).join(' · ');
+  loadPhoto(link, caption);
   count.textContent = `${String(activePhoto + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
 }
 
 function showPortrait() {
   activePhoto = null;
-  title.textContent = 'Matt in the forest';
   count.textContent = '';
-  largeImage.alt = portraitImage.alt;
-  largeImage.src = portraitImage.currentSrc || portraitImage.src;
-  if (largeImage.src === portrait.href) return;
-  const full = new Image();
-  full.onload = () => {
-    if (activePhoto === null) largeImage.src = full.src;
-  };
-  full.src = portrait.href;
+  loadPhoto(portrait, 'Matt in the forest');
 }
 
 function changeViewer(update) {
@@ -116,7 +156,10 @@ lightbox.addEventListener('keydown', event => {
   if (event.key === 'ArrowLeft') { event.preventDefault(); showGalleryPhoto(activePhoto - 1); }
   if (event.key === 'ArrowRight') { event.preventDefault(); showGalleryPhoto(activePhoto + 1); }
 });
-lightbox.addEventListener('close', () => opener?.focus({ preventScroll: true }));
+lightbox.addEventListener('close', () => {
+  imageRequest++;
+  opener?.focus({ preventScroll: true });
+});
 
 function followLegacyAnchor() {
   const anchor = document.getElementById(location.hash.slice(1));
