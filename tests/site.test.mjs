@@ -7,6 +7,25 @@ import { once } from 'node:events';
 import { build } from '../scripts/build.mjs';
 import { createSiteServer } from '../scripts/serve.mjs';
 
+await test('The gallery starts with six photos and discloses the rest without scripting', async () => {
+  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  const section = html.match(/<section\b[^>]* id="photos"[^>]*>([\s\S]*?)<\/section>/)[1];
+  const details = section.match(/<details\b([^>]*)>([\s\S]*?)<\/details>/);
+  assert.ok(details, 'The full collection needs a native disclosure');
+  assert.doesNotMatch(details[1], /\bopen\b/);
+  const photoCount = markup => [...markup.matchAll(/<figure class="photo">/g)].length;
+  assert.equal(photoCount(section.slice(0, details.index)), 6);
+  assert.equal(photoCount(section), 6 + photoCount(details[2]));
+  assert.match(details[2].match(/<summary\b[^>]*>([\s\S]*?)<\/summary>/)[1],
+    new RegExp('View all ' + photoCount(section) + ' photographs'));
+  const links = [...section.matchAll(/<a href="([^"]+\.jpg)"[^>]*>\s*<img\b[^>]*\bsrcset="([^"]+)"/g)];
+  assert.equal(links.length, photoCount(section));
+  for (const [, original, candidates] of links) {
+    const sources = candidates.split(',').map(candidate => candidate.trim().split(/\s+/)[0]);
+    assert.ok(!sources.includes(original), 'Opening the viewer should request the full photograph');
+  }
+});
+
 await test('Production site is complete, subpath-safe, and contains no private source', async t => {
   const temporary = await mkdtemp(join(tmpdir(), 'matt-page-'));
   const output = join(temporary, 'dist');

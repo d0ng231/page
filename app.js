@@ -15,20 +15,6 @@ themeToggle.addEventListener('click', () => {
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
 const photos = [...document.querySelectorAll('.photo a')];
-const galleryToggle = document.querySelector('.gallery-toggle');
-const morePhotos = document.getElementById('more-photos');
-if (galleryToggle && morePhotos?.childElementCount) {
-  morePhotos.hidden = true;
-  galleryToggle.hidden = false;
-  galleryToggle.addEventListener('click', () => {
-    const expanded = morePhotos.hidden;
-    morePhotos.hidden = !expanded;
-    galleryToggle.setAttribute('aria-expanded', String(expanded));
-    galleryToggle.querySelector('.gallery-label').textContent = expanded
-      ? 'Show fewer photographs' : `View all ${photos.length} photographs`;
-    galleryToggle.querySelector('[aria-hidden]').textContent = expanded ? '−' : '↗';
-  });
-}
 const lightbox = document.querySelector('.lightbox');
 const largeImage = document.querySelector('#lightbox-image');
 const imageFrame = largeImage.closest('.lightbox-photo');
