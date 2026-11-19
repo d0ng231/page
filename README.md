@@ -17,7 +17,7 @@ Open `http://127.0.0.1:4173/page/`. The root URL also works. Without npm, use `n
 
 ## Content and design
 
-- `index.html`: biography, five projects, the MELD demo, background, and a photography gallery. Research content was checked against the CV updated October 29, 2026. Under-review papers are labeled accordingly.
+- `index.html`: biography, five projects, the MELD demo, background, and a photography gallery. Research content was checked against the CV updated October 29, 2026.
 - `styles.css`: compact responsive layout, light/dark themes, subtle hover feedback, and reduced-motion support.
 - `theme.js` restores the saved theme before the first paint. `app.js` handles the theme switch, photo viewer, and older section bookmarks.
 - `assets/photos/`: responsive web copies of photographs selected by Matt from Apple Photos and his edited files. Full compositions, borders, and collages are retained. Large images use up to 2400 pixels on the long edge, without upscaling; the gallery offers 400-pixel and up-to-720-pixel thumbnails. The portrait also has a 1080-pixel option for high-density screens. Web exports omit EXIF and location metadata; library originals are unchanged. The previous four image URLs remain available for existing links.
